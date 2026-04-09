@@ -432,15 +432,19 @@
     transform: translateY(-3px);
   }
   .team-avatar {
-    width: 80px; height: 80px;
+    width: 96px; height: 96px;
     border-radius: 50%;
     margin: 0 auto 1.25rem;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem; font-weight: 600; color: var(--lv-white);
+    overflow: hidden;
+    border: 3px solid #E8ECF2;
+    transition: border-color 0.3s var(--ease);
   }
-  .team-card:nth-child(1) .team-avatar { background: linear-gradient(135deg, var(--lv-coral), var(--lv-gold)); }
-  .team-card:nth-child(2) .team-avatar { background: linear-gradient(135deg, var(--lv-teal), var(--lv-cyan)); }
-  .team-card:nth-child(3) .team-avatar { background: linear-gradient(135deg, var(--lv-blue), var(--lv-dark-blue)); }
+  .team-card:hover .team-avatar { border-color: var(--lv-teal); }
+  .team-avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
   .team-card h4 {
     font-size: 1.05rem; font-weight: 600;
     color: var(--lv-navy); margin-bottom: 0.25rem;
@@ -864,20 +868,20 @@
 
     <div class="team-grid">
       <div class="team-card">
-        <div class="team-avatar">LG</div>
+        <div class="team-avatar"><img src="img/lisa-graham.png" alt="Lisa Graham"></div>
         <h4>Lisa Graham</h4>
         <div class="team-former">Real Estate Investment</div>
         <p>Deep real estate expertise with extensive experience in property valuation, market analysis, and investment strategy for institutional investors.</p>
       </div>
       <div class="team-card">
-        <div class="team-avatar">RP</div>
-        <h4>Raimund Paetzmann</h4>
+        <div class="team-avatar"><img src="img/carl-friedrich.png" alt="Carl-Friedrich zu Knyphausen"></div>
+        <h4>Carl-Friedrich zu Knyphausen</h4>
         <div class="team-former">Former DHL, arvato, Zalando</div>
         <p>Former logistics operations leader with hands-on experience managing warehouse facilities and supply chain networks across Europe.</p>
       </div>
       <div class="team-card">
-        <div class="team-avatar">CK</div>
-        <h4>Carl-Friedrich zu Knyphausen</h4>
+        <div class="team-avatar"><img src="img/raimund-paetzmann.png" alt="Raimund Paetzmann"></div>
+        <h4>Raimund Paetzmann</h4>
         <div class="team-former">Former Amazon, Zalando</div>
         <p>Operational expertise in building specifications, facility modifications, and translating operational requirements into construction needs.</p>
       </div>
