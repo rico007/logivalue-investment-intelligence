@@ -412,6 +412,62 @@
     line-height: 1.7; font-weight: 300;
   }
 
+  /* ── TEAM ── */
+  .team { background: var(--lv-white); }
+  .team-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 3.5rem;
+  }
+  .team-card {
+    text-align: center;
+    border-radius: var(--radius);
+    padding: 2.5rem 1.75rem 2rem;
+    border: 1px solid #E8ECF2;
+    transition: all 0.3s var(--ease);
+    position: relative; overflow: hidden;
+  }
+  .team-card:hover {
+    border-color: transparent;
+    box-shadow: 0 12px 40px rgba(26, 59, 93, 0.07);
+    transform: translateY(-3px);
+  }
+  .team-avatar {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1.25rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; font-weight: 600; color: var(--lv-white);
+  }
+  .team-card:nth-child(1) .team-avatar { background: linear-gradient(135deg, var(--lv-coral), var(--lv-gold)); }
+  .team-card:nth-child(2) .team-avatar { background: linear-gradient(135deg, var(--lv-teal), var(--lv-cyan)); }
+  .team-card:nth-child(3) .team-avatar { background: linear-gradient(135deg, var(--lv-blue), var(--lv-dark-blue)); }
+  .team-card h4 {
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--lv-navy); margin-bottom: 0.25rem;
+  }
+  .team-card .team-former {
+    font-size: 0.72rem; font-weight: 600;
+    color: var(--lv-coral); letter-spacing: 0.04em;
+    text-transform: uppercase; margin-bottom: 0.75rem;
+  }
+  .team-card p {
+    font-size: 0.82rem; color: var(--lv-muted);
+    line-height: 1.7; font-weight: 300;
+  }
+  .team-footnote {
+    margin-top: 2.5rem;
+    padding: 1.75rem;
+    background: var(--lv-light);
+    border-radius: var(--radius-sm);
+    text-align: center;
+  }
+  .team-footnote p {
+    font-size: 0.88rem; color: var(--lv-muted);
+    line-height: 1.75; font-weight: 300;
+    max-width: 700px; margin: 0 auto;
+  }
+  .team-footnote strong { font-weight: 600; color: var(--lv-navy); }
+
   /* ── KICKER ── */
   .kicker {
     background: var(--lv-navy-deep);
@@ -619,6 +675,7 @@
     .problem-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .sides-grid { grid-template-columns: 1fr; }
     .capabilities-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: 1fr; }
     .footer-inner { flex-direction: column; text-align: center; }
     .footer-left { flex-direction: column; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
@@ -794,6 +851,40 @@
         <h4>Portfolio strategy</h4>
         <p>Develop future-proof portfolio strategy based on market dynamics and occupier trends.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="section-inner">
+    <div class="section-label">Expert team</div>
+    <div class="section-title">Former operators, now investor advisors.</div>
+    <p class="section-subtitle">We've been on your side of the table — and the tenant's.</p>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">LG</div>
+        <h4>Lisa Graham</h4>
+        <div class="team-former">Real Estate Investment</div>
+        <p>Deep real estate expertise with extensive experience in property valuation, market analysis, and investment strategy for institutional investors.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">RP</div>
+        <h4>Raimund Paetzmann</h4>
+        <div class="team-former">Former DHL, arvato, Zalando</div>
+        <p>Former logistics operations leader with hands-on experience managing warehouse facilities and supply chain networks across Europe.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">CK</div>
+        <h4>Carl-Friedrich zu Knyphausen</h4>
+        <div class="team-former">Former Amazon, Zalando</div>
+        <p>Operational expertise in building specifications, facility modifications, and translating operational requirements into construction needs.</p>
+      </div>
+    </div>
+
+    <div class="team-footnote">
+      <p>This founding team combines <strong>real estate investment acumen</strong> with <strong>operational logistics experience</strong> — a positioning that is credible and nearly impossible to replicate, differentiating us from traditional brokers, RE consultants, and Big 4 advisors who lack hands-on warehouse operations expertise.</p>
     </div>
   </div>
 </section>
