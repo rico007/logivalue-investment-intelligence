@@ -849,12 +849,13 @@
 </section>
 
 <script>
-document.getElementById('briefing-form').addEventListener('submit', function(e) {
+document.getElementById('briefing-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   var email = document.getElementById('email').value.trim();
   var consentComms = document.getElementById('consent-comms').checked;
   var consentData = document.getElementById('consent-data').checked;
   var errorEl = document.getElementById('form-error');
+  var submitBtn = this.querySelector('button[type="submit"]');
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     errorEl.textContent = 'Please enter a valid email address.';
@@ -868,22 +869,27 @@ document.getElementById('briefing-form').addEventListener('submit', function(e) 
   }
   errorEl.classList.remove('visible');
 
-  // Send via mailto as fallback (works everywhere, no backend needed)
-  var subject = encodeURIComponent('Investment Intelligence Briefing');
-  var body = encodeURIComponent(
-    'Hi Logivalue team,\n\n' +
-    'I am interested in learning more about Logivalue\u2019s Investment Intelligence approach.\n\n' +
-    'My email: ' + email + '\n\n' +
-    'Consents given:\n' +
-    '- Communications: Yes\n' +
-    '- Data storage & processing: Yes\n\n' +
-    'Best regards'
-  );
-  window.location.href = 'mailto:investment-intelligence@logivalue.com?subject=' + subject + '&body=' + body;
+  // Disable button while sending
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
 
-  // Show success state
-  document.getElementById('briefing-form').style.display = 'none';
-  document.getElementById('form-success').classList.add('visible');
+  try {
+    var res = await fetch('https://logivalue-investment-intelligence-a.vercel.app/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email })
+    });
+    var data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Something went wrong.');
+
+    document.getElementById('briefing-form').style.display = 'none';
+    document.getElementById('form-success').classList.add('visible');
+  } catch (err) {
+    errorEl.textContent = err.message || 'Something went wrong. Please try again.';
+    errorEl.classList.add('visible');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Request a briefing \u2192';
+  }
 });
 </script>
 
