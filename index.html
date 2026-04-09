@@ -419,20 +419,19 @@
   .logo-grid {
     display: flex; flex-wrap: wrap;
     justify-content: center; align-items: center;
-    gap: 2.5rem 3rem; margin-top: 2.5rem;
+    gap: 2.5rem 3.5rem; margin-top: 2.5rem;
   }
   .logo-item {
-    font-family: var(--font);
-    font-size: 1.05rem; font-weight: 600;
-    color: #B0B8C8;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
-    transition: color 0.3s var(--ease);
+    height: 28px; width: auto;
+    filter: grayscale(100%) brightness(1.4) contrast(0.5);
+    opacity: 0.55;
+    transition: all 0.3s var(--ease);
     user-select: none;
   }
-  .logo-item:hover { color: #8892A4; }
-  .logo-item.logo-lg { font-size: 1.2rem; }
-  .logo-item.logo-sm { font-size: 0.92rem; }
+  .logo-item:hover {
+    filter: grayscale(0%) brightness(1) contrast(1);
+    opacity: 1;
+  }
 
   /* ── TEAM ── */
   .team { background: var(--lv-white); }
@@ -454,7 +453,7 @@
     transform: translateY(-3px);
   }
   .team-avatar {
-    width: 96px; height: 96px;
+    width: 192px; height: 192px;
     border-radius: 50%;
     margin: 0 auto 1.25rem;
     overflow: hidden;
@@ -886,20 +885,20 @@
   <div class="section-inner">
     <div class="section-label">Our references</div>
     <div class="logo-grid">
-      <span class="logo-item logo-lg">Zalando</span>
-      <span class="logo-item logo-lg">Amazon</span>
-      <span class="logo-item logo-lg">DHL</span>
-      <span class="logo-item logo-lg">Prologis</span>
-      <span class="logo-item">arvato Bertelsmann</span>
-      <span class="logo-item">Delivery Hero</span>
-      <span class="logo-item">Cushman &amp; Wakefield</span>
-      <span class="logo-item">JLL</span>
-      <span class="logo-item">Union Investment</span>
-      <span class="logo-item">Digitec Galaxus</span>
-      <span class="logo-item logo-sm">Bergzeit</span>
-      <span class="logo-item logo-sm">Autodoc</span>
-      <span class="logo-item logo-sm">Caseking</span>
-      <span class="logo-item logo-sm">Norsan</span>
+      <img class="logo-item" src="img/logos/zalando.svg" alt="Zalando">
+      <img class="logo-item" src="img/logos/amazon.svg" alt="Amazon">
+      <img class="logo-item" src="img/logos/dhl.svg" alt="DHL">
+      <img class="logo-item" src="img/logos/prologis.svg" alt="Prologis">
+      <img class="logo-item" src="img/logos/arvato.svg" alt="arvato Bertelsmann">
+      <img class="logo-item" src="img/logos/delivery-hero.svg" alt="Delivery Hero">
+      <img class="logo-item" src="img/logos/cushman-wakefield.svg" alt="Cushman &amp; Wakefield">
+      <img class="logo-item" src="img/logos/jll.svg" alt="JLL">
+      <img class="logo-item" src="img/logos/union-investment.svg" alt="Union Investment">
+      <img class="logo-item" src="img/logos/digitec-galaxus.svg" alt="Digitec Galaxus">
+      <img class="logo-item" src="img/logos/bergzeit.svg" alt="Bergzeit">
+      <img class="logo-item" src="img/logos/autodoc.svg" alt="Autodoc">
+      <img class="logo-item" src="img/logos/caseking.svg" alt="Caseking">
+      <img class="logo-item" src="img/logos/norsan.svg" alt="Norsan">
     </div>
   </div>
 </section>
