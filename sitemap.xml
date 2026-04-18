@@ -73,6 +73,20 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <!-- Blog -->
+  <url>
+    <loc>https://investment-intelligence.logivalue.com/blog/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://investment-intelligence.logivalue.com/blog/why-logistics-valuations-are-broken.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
   <!-- Team -->
   <url>
     <loc>https://investment-intelligence.logivalue.com/team/raimund-paetzmann.html</loc>

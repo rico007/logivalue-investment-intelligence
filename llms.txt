@@ -59,6 +59,11 @@ Zalando, Amazon, DHL, Prologis, arvato Bertelsmann, Delivery Hero,
 Cushman & Wakefield, JLL, Union Investment, Digitec Galaxus, Bergzeit,
 Autodoc, Caseking, Norsan
 
+## Blog / Insights
+- Why logistics real estate valuations are broken — and what should replace them
+  https://investment-intelligence.logivalue.com/blog/why-logistics-valuations-are-broken.html
+  Authors: Raimund Paetzmann & Carl-Friedrich zu Knyphausen · April 2026
+
 ## Contact
 - Email: info@logivalue.com
 - Website: https://logivalue.com
