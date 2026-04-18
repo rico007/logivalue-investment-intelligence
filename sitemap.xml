@@ -65,6 +65,14 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <!-- Methodology -->
+  <url>
+    <loc>https://investment-intelligence.logivalue.com/methodology/site-scoring-framework.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
   <!-- Team -->
   <url>
     <loc>https://investment-intelligence.logivalue.com/team/raimund-paetzmann.html</loc>

@@ -26,13 +26,23 @@ broker-comparable-based valuation with supply-chain-grounded analysis.
 - Cold Chain: specialised infrastructure, high build cost, high tenant lock-in
 - City Delivery: urban proximity premium, scarce supply, strong demand
 
+## Methodology
+- Site Scoring Framework: https://investment-intelligence.logivalue.com/methodology/site-scoring-framework.html
+  42 site variables × 65 use-case profiles × 14 categories → ranked tenant fit scores
+
 ## Services
 1. Supply chain cost simulation — evaluate deals beyond headline rents
+   https://investment-intelligence.logivalue.com/services/supply-chain-cost-simulation.html
 2. Catchment area mapping — using operational criteria
+   https://investment-intelligence.logivalue.com/services/catchment-area-mapping.html
 3. Use case identification — deep-dive property analysis
+   https://investment-intelligence.logivalue.com/services/use-case-identification.html
 4. Spec alignment — maximizing tenant fit
+   https://investment-intelligence.logivalue.com/services/spec-alignment.html
 5. CAPEX quantification — for value optimization
+   https://investment-intelligence.logivalue.com/services/capex-quantification.html
 6. Portfolio strategy — market-driven approach
+   https://investment-intelligence.logivalue.com/services/portfolio-strategy.html
 
 ## Team
 - Raimund Paetzmann: Europe's leading occupier-side strategist for logistics

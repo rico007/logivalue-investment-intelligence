@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logivalue Site Scoring Framework — How We Evaluate Logistics Properties | Logivalue</title>
+<meta name="description" content="Logivalue's site scoring framework evaluates logistics properties against 42 site variables and 65 use-case profiles across 14 categories — producing ranked fit scores that identify which tenant types will pay the most for a specific building.">
+<meta name="keywords" content="logistics property scoring methodology, warehouse evaluation framework, logistics real estate assessment, occupier fit score, logistics use case analysis">
+<link rel="canonical" href="https://investment-intelligence.logivalue.com/methodology/site-scoring-framework.html">
+<meta property="og:title" content="Logivalue Site Scoring Framework — How We Evaluate Logistics Properties">
+<meta property="og:description" content="How Logivalue evaluates logistics properties against 42 site variables and 65 use-case profiles to identify which tenants will pay premium rents.">
+<meta property="og:url" content="https://investment-intelligence.logivalue.com/methodology/site-scoring-framework.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Logivalue GmbH">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Logivalue Site Scoring Framework — How We Evaluate Logistics Properties",
+  "description": "Logivalue's site scoring framework evaluates logistics properties against 42 site variables and 65 use-case profiles across 14 categories to identify which tenant types will pay the most for a specific building.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Raimund Paetzmann",
+      "jobTitle": "Occupier-Side Logistics Real Estate Strategist",
+      "worksFor": { "@type": "Organization", "name": "Logivalue GmbH" }
+    },
+    {
+      "@type": "Person",
+      "name": "Carl-Friedrich zu Knyphausen",
+      "jobTitle": "Logistics Operations & Warehouse Automation Expert",
+      "worksFor": { "@type": "Organization", "name": "Logivalue GmbH" }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Logivalue GmbH",
+    "url": "https://logivalue.com"
+  },
+  "datePublished": "2026-04-18",
+  "dateModified": "2026-04-18"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many site variables does Logivalue's scoring framework use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Logivalue's site scoring framework evaluates each property against 42 site variables spanning four categories: location, building specification, operational suitability, and market dynamics. These variables capture everything a logistics occupier considers when evaluating a building."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 14 logistics use-case categories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Logivalue's 65 use-case profiles are organised into 14 categories: Production & Manufacturing, Inbound & Consolidation, Primary Distribution, Secondary Distribution, Cross-Docking & Transit, E-Commerce & Fulfilment, Parcel & CEP, Freight & Logistics Services, Temperature-Controlled, Retail-Specific, Specialised, Outdoor & Yard, Last Mile & Urban, and Reverse & Circular."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the site scoring output tell an investor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The output is a ranked list of all 65 use-case profiles for a specific property, identifying which tenant types are the strongest fit and which would pay the most. The spread in achievable rent between the best-fit and worst-fit tenant for a single building can exceed 30% — a difference that comparable-based analysis cannot capture."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Logivalue Investment Intelligence", "item": "https://investment-intelligence.logivalue.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Methodology", "item": "https://investment-intelligence.logivalue.com/methodology/" },
+    { "@type": "ListItem", "position": 3, "name": "Site Scoring Framework", "item": "https://investment-intelligence.logivalue.com/methodology/site-scoring-framework.html" }
+  ]
+}
+</script>
+<style>
+  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 300; font-display: swap; src: url(../fonts/poppins-300.woff2) format('woff2'); }
+  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/poppins-400.woff2) format('woff2'); }
+  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/poppins-500.woff2) format('woff2'); }
+  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/poppins-600.woff2) format('woff2'); }
+  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url(../fonts/poppins-700.woff2) format('woff2'); }
+
+  :root {
+    --lv-navy: #1A3B5D; --lv-navy-deep: #0f2640; --lv-blue: #5A74B8;
+    --lv-coral: #FF8A6D; --lv-teal: #3DA5A1; --lv-cyan: #68DCD8;
+    --lv-light: #F4F6FA; --lv-white: #ffffff; --lv-text: #1E293B;
+    --lv-muted: #64748B; --font: 'Poppins', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--lv-text); background: var(--lv-white); line-height: 1.8; -webkit-font-smoothing: antialiased; }
+
+  nav { background: var(--lv-navy-deep); padding: 0.9rem 2.5rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  nav img { height: 30px; }
+  nav a { text-decoration: none; }
+  .nav-cta { background: var(--lv-coral); color: var(--lv-white); padding: 0.5rem 1.4rem; border-radius: 10px; font-weight: 600; font-size: 0.82rem; }
+
+  .hero-article { background: var(--lv-navy-deep); padding: 5rem 2.5rem 4rem; text-align: center; }
+  .hero-article .label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lv-coral); margin-bottom: 1rem; }
+  .hero-article h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--lv-white); font-weight: 600; line-height: 1.2; max-width: 800px; margin: 0 auto 1.25rem; letter-spacing: -0.02em; }
+  .hero-article .byline { font-size: 0.85rem; color: rgba(255,255,255,0.45); font-weight: 300; }
+  .hero-article .byline strong { color: rgba(255,255,255,0.7); font-weight: 500; }
+
+  article { max-width: 740px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
+  article h2 { font-size: 1.5rem; font-weight: 600; color: var(--lv-navy); margin: 3rem 0 1rem; letter-spacing: -0.01em; line-height: 1.3; }
+  article p { font-size: 0.95rem; color: var(--lv-text); line-height: 1.85; margin-bottom: 1.25rem; font-weight: 300; }
+  article strong { font-weight: 600; color: var(--lv-navy); }
+  article a { color: var(--lv-teal); text-underline-offset: 3px; }
+  article ul { margin: 0 0 1.5rem 1.25rem; font-size: 0.95rem; font-weight: 300; color: var(--lv-text); }
+  article li { margin-bottom: 0.5rem; line-height: 1.75; }
+
+  blockquote { border-left: 3px solid var(--lv-coral); padding: 1.25rem 1.5rem; margin: 1.75rem 0; background: var(--lv-light); border-radius: 0 12px 12px 0; }
+  blockquote p { font-size: 0.95rem; font-style: italic; color: var(--lv-navy); margin-bottom: 0.5rem; font-weight: 400; line-height: 1.7; }
+  blockquote cite { font-size: 0.78rem; font-style: normal; color: var(--lv-muted); font-weight: 500; }
+
+  .key-takeaways { background: var(--lv-navy-deep); border-radius: 14px; padding: 1.75rem 2rem; margin: 0 0 2.5rem; }
+  .key-takeaways h3 { color: var(--lv-cyan); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 0.75rem; }
+  .key-takeaways ul { margin: 0; list-style: none; padding: 0; }
+  .key-takeaways li { font-size: 0.88rem; color: rgba(255,255,255,0.75); font-weight: 300; line-height: 1.7; padding-left: 1.25rem; position: relative; margin-bottom: 0.4rem; }
+  .key-takeaways li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 6px; height: 6px; border-radius: 50%; background: var(--lv-coral); }
+  .key-takeaways strong { color: rgba(255,255,255,0.95); font-weight: 500; }
+
+  .category-list { columns: 2; gap: 1.5rem; margin: 1rem 0 1.75rem; list-style: none; padding: 0; }
+  .category-list li { font-size: 0.88rem; color: var(--lv-text); font-weight: 400; padding: 0.3rem 0 0.3rem 1rem; border-left: 2px solid var(--lv-teal); margin-bottom: 0.5rem; break-inside: avoid; }
+
+  .stat-highlight { background: var(--lv-light); border-radius: 14px; padding: 1.75rem; margin: 1.5rem 0; }
+  .stat-highlight ul { margin-bottom: 0; }
+  .stat-highlight li { font-weight: 400; }
+
+  .updated { font-size: 0.78rem; color: var(--lv-muted); text-align: center; margin-bottom: 3rem; }
+
+  .cta-box { background: var(--lv-navy-deep); border-radius: 16px; padding: 2.5rem; text-align: center; margin: 3rem 0; }
+  .cta-box h3 { color: var(--lv-white); font-size: 1.3rem; margin-bottom: 0.75rem; }
+  .cta-box p { color: rgba(255,255,255,0.55); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .cta-box a { background: var(--lv-coral); color: var(--lv-white); padding: 0.85rem 2rem; border-radius: 12px; font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; }
+
+  footer { background: var(--lv-navy-deep); padding: 2rem 2.5rem; text-align: center; }
+  footer p { font-size: 0.72rem; color: rgba(255,255,255,0.2); }
+  footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    article { padding: 2rem 1.25rem 3rem; }
+    .hero-article { padding: 4rem 1.25rem 3rem; }
+    .category-list { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://investment-intelligence.logivalue.com"><img src="https://logivalue.com/logo.svg" alt="Logivalue — logistics real estate investment intelligence"></a>
+  <a class="nav-cta" href="https://investment-intelligence.logivalue.com/#contact">Request a briefing</a>
+</nav>
+
+<div class="hero-article">
+  <div class="label">Methodology</div>
+  <h1>The Logivalue Site Scoring Framework</h1>
+  <div class="byline">By <strong><a href="https://www.linkedin.com/in/raimundpaetzmann/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none;">Raimund Paetzmann</a></strong> and <strong><a href="https://www.linkedin.com/in/knyphausen/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none;">Carl-Friedrich zu Knyphausen</a></strong> · Logivalue GmbH · Last updated April 2026</div>
+</div>
+
+<article>
+
+<p class="updated">Last updated: April 2026</p>
+
+<div class="key-takeaways">
+  <h3>Key Takeaways</h3>
+  <ul>
+    <li>The framework evaluates each property against <strong>42 site variables</strong> across four input categories</li>
+    <li>It scores against <strong>65 use-case profiles</strong> organised into <strong>14 logistics categories</strong></li>
+    <li>The output is a <strong>ranked list</strong> identifying the highest-value tenant types for each specific building</li>
+    <li>The spread in achievable rent between best-fit and worst-fit tenant can exceed <strong>30%</strong> — invisible to comparable analysis</li>
+  </ul>
+</div>
+
+<h2>What the Framework Does</h2>
+
+<p>The Logivalue Site Scoring Framework answers the question traditional valuation cannot: given a specific logistics building, which tenant types would extract the most operational value from it — and what would they pay as a result?</p>
+
+<p>It does this by evaluating the building's physical and locational characteristics against the specific requirements of 65 distinct logistics use-case profiles. The output is a ranked fit score for each profile — identifying where the highest rent potential lies, and which use cases are a poor match regardless of what headline comparables suggest.</p>
+
+<blockquote>
+  <p>"A building doesn't have one value. It has 65 values — one for each type of tenant who might occupy it. Our framework makes those values explicit, so investors can target the tenants that will pay the most and stay the longest."</p>
+  <cite>— Raimund Paetzmann, Occupier-Side Strategist, Logivalue</cite>
+</blockquote>
+
+<h2>42 Site Variables Across Four Categories</h2>
+
+<p>Every property is evaluated against 42 site variables spanning four input categories: <strong>location</strong>, <strong>building specification</strong>, <strong>operational suitability</strong>, and <strong>market dynamics</strong>. Together these capture the full picture of what a logistics occupier considers when making a site decision — from physical measurements and infrastructure proximity to labour market conditions and planning constraints.</p>
+
+<p>The variables are calibrated to reflect how occupiers actually evaluate buildings, not how brokers describe them. A specification detail that is irrelevant to one tenant type can be decisive for another — which is precisely why a single set of comparables cannot capture what a building is worth.</p>
+
+<h2>65 Profiles Across 14 Logistics Categories</h2>
+
+<p>The 65 use-case profiles span the full spectrum of European logistics real estate occupiers, organised into 14 categories:</p>
+
+<ul class="category-list">
+  <li>Production &amp; Manufacturing</li>
+  <li>Inbound &amp; Consolidation</li>
+  <li>Primary Distribution</li>
+  <li>Secondary Distribution</li>
+  <li>Cross-Docking &amp; Transit</li>
+  <li>E-Commerce &amp; Fulfilment</li>
+  <li>Parcel &amp; CEP</li>
+  <li>Freight &amp; Logistics Services</li>
+  <li>Temperature-Controlled</li>
+  <li>Retail-Specific</li>
+  <li>Specialised</li>
+  <li>Outdoor &amp; Yard</li>
+  <li>Last Mile &amp; Urban</li>
+  <li>Reverse &amp; Circular</li>
+</ul>
+
+<p>Each profile encodes the operational priorities of that occupier type — which site characteristics matter most, and how much. A cross-dock terminal and a pharmaceutical cold chain facility are both logistics real estate. Their site requirements have almost nothing in common. The framework reflects this by evaluating each profile against the variables that actually drive that occupier's location decisions.</p>
+
+<h2>From 65 Profiles to 95 Property Types</h2>
+
+<p>The logistics real estate market uses more than 65 names for distinct facility types. Logivalue maps all 95 recognised property types to the 65 scoring profiles — ensuring any industry-standard property type name can be evaluated consistently. For a full overview, see our <a href="../guides/logistics-property-types.html">logistics property types guide</a>.</p>
+
+<h2>The Output: Ranked Fit, Actionable Decisions</h2>
+
+<p>For each property, the framework produces a ranked list of all 65 profiles — identifying which tenant types are the strongest fit and which represent a mismatch. The spread in achievable rent between best-fit and worst-fit tenant for a single building routinely exceeds 30%. That gap is what comparable analysis misses entirely.</p>
+
+<blockquote>
+  <p>"The ranked output changes the investor's question. Instead of 'what is this building worth?' you can ask 'which tenant category should I target, and what will they pay?' Those are fundamentally different — and far more useful — questions."</p>
+  <cite>— Carl-Friedrich zu Knyphausen, Managing Director, Logivalue</cite>
+</blockquote>
+
+<p>The framework is the analytical foundation behind Logivalue's <a href="../services/supply-chain-cost-simulation.html">supply chain cost simulation</a> service. The ranked output identifies which tenant categories to target; the simulation then models what each of those tenant types would actually pay — producing the complete investment case.</p>
+
+<div class="stat-highlight">
+  <ul>
+    <li><strong>42</strong> site variables across 4 input categories</li>
+    <li><strong>65</strong> use-case profiles representing distinct logistics occupier types</li>
+    <li><strong>14</strong> logistics categories covering the full market spectrum</li>
+    <li><strong>95</strong> recognised property types mapped within the framework</li>
+    <li><strong>30%+</strong> typical rent spread between best-fit and worst-fit tenant</li>
+  </ul>
+</div>
+
+<div class="cta-box">
+  <h3>See the framework applied to your assets</h3>
+  <p>Book a 20-minute briefing. We will run the site scoring framework against your specific properties and show you which tenant categories offer the strongest rent potential.</p>
+  <a href="https://investment-intelligence.logivalue.com/#contact">Request a briefing &rarr;</a>
+</div>
+
+</article>
+
+<footer>
+  <p>&copy; 2026 Logivalue GmbH &middot; <a href="https://investment-intelligence.logivalue.com">Investment Intelligence</a> &middot; <a href="https://logivalue.com/data-security">Data Security</a> &middot; <a href="https://logivalue.com/imprint">Imprint</a></p>
+</footer>
+
+</body>
+</html>
