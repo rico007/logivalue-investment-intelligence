@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Supply Chain Cost Simulation for Logistics Real Estate | Logivalue</title>
-<meta name="description" content="Supply chain cost simulation models how a building's characteristics affect a tenant's total logistics costs — producing more accurate valuations than headline rent comparisons. 42 site variables, 65 scoring profiles.">
+<meta name="description" content="Supply chain cost simulation models how a building's characteristics affect a tenant's total logistics costs — producing more accurate valuations than headline rent comparisons.">
 <meta name="keywords" content="supply chain cost simulation real estate, logistics cost modelling, warehouse valuation methodology, occupier willingness-to-pay, total logistics cost analysis">
 <link rel="canonical" href="https://investment-intelligence.logivalue.com/services/supply-chain-cost-simulation.html">
 <meta property="og:title" content="Supply Chain Cost Simulation for Logistics Real Estate">
-<meta property="og:description" content="How supply chain cost simulation identifies which tenants will pay premium rents — using 42 site variables and 65 scoring profiles instead of headline rent comparisons.">
+<meta property="og:description" content="We simulate the total logistics costs of potential occupiers, then compare across tenant types to identify who pays the most for your specific building.">
 <meta property="og:url" content="https://investment-intelligence.logivalue.com/services/supply-chain-cost-simulation.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Logivalue GmbH">
@@ -18,13 +18,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://investment-intelligence.logivalue.com/img/og-guide.png">
 <meta name="twitter:title" content="Supply Chain Cost Simulation for Logistics Real Estate">
-<meta name="twitter:description" content="How supply chain cost simulation identifies which tenants will pay premium rents — using 42 site variables and 65 scoring profiles instead of headline rent comparisons.">
+<meta name="twitter:description" content="We simulate the total logistics costs of potential occupiers, then compare across tenant types to identify who pays the most for your specific building.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Supply Chain Cost Simulation for Logistics Real Estate",
-  "description": "How supply chain cost simulation models occupier willingness-to-pay using 42 site variables and 65 scoring profiles to produce more accurate logistics real estate valuations.",
+  "description": "Supply chain cost simulation models occupier willingness-to-pay by simulating total logistics costs per tenant type and comparing across 65 occupier profiles.",
   "author": [
     {
       "@type": "Person",
@@ -45,39 +45,7 @@
     "url": "https://logivalue.com"
   },
   "datePublished": "2026-04-15",
-  "dateModified": "2026-04-15"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is supply chain cost simulation in real estate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Supply chain cost simulation evaluates real estate deals by modelling how a building's characteristics affect a tenant's total logistics costs — including transport, labour, automation requirements, and throughput capacity. Unlike headline rent comparisons, it determines a building's true economic value within the tenant's supply chain and predicts occupier willingness-to-pay based on operational reality."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What inputs does supply chain cost simulation use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Logivalue's supply chain cost simulation uses 42 site variables covering location, building specification, operational suitability, and market dynamics, combined with 65 scoring profiles representing different occupier types. These inputs model transport costs, labour availability, automation potential, throughput capacity, and total logistics cost — going far beyond the location, size, and age comparisons used in traditional approaches."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why is supply chain cost simulation more accurate than broker comparables?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Broker comparables compare headline rents of superficially similar buildings but do not account for supply chain economics. Two warehouses at the same rent can have vastly different operational value to different tenant types. Supply chain cost simulation reveals which tenant types would pay the most for a specific building — and why — enabling investors to target tenants that deliver premium rents and long-term commitment."
-      }
-    }
-  ]
+  "dateModified": "2026-04-20"
 }
 </script>
 <script type="application/ld+json">
@@ -165,10 +133,6 @@
     font-size: 1.5rem; font-weight: 600; color: var(--lv-navy);
     margin: 3rem 0 1rem; letter-spacing: -0.01em; line-height: 1.3;
   }
-  article h3 {
-    font-size: 1.15rem; font-weight: 600; color: var(--lv-navy);
-    margin: 2.25rem 0 0.75rem;
-  }
   article p {
     font-size: 0.95rem; color: var(--lv-text); line-height: 1.85;
     margin-bottom: 1.25rem; font-weight: 300;
@@ -176,7 +140,7 @@
   article strong { font-weight: 600; color: var(--lv-navy); }
   article a { color: var(--lv-teal); text-underline-offset: 3px; }
 
-  article ul, article ol {
+  article ul {
     margin: 0 0 1.5rem 1.25rem;
     font-size: 0.95rem; font-weight: 300; color: var(--lv-text);
   }
@@ -199,29 +163,30 @@
     color: var(--lv-muted); font-weight: 500;
   }
 
-  .comparison-table {
-    width: 100%; border-collapse: collapse;
-    margin: 1.5rem 0 2rem; font-size: 0.85rem;
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.25rem;
+    margin: 1.75rem 0 2.5rem;
   }
-  .comparison-table th {
-    background: var(--lv-navy); color: var(--lv-white);
-    padding: 0.75rem 1rem; text-align: left; font-weight: 600;
-    font-size: 0.8rem;
-  }
-  .comparison-table td {
-    padding: 0.65rem 1rem; border-bottom: 1px solid #E8ECF2;
-    font-weight: 300; color: var(--lv-text); vertical-align: top;
-  }
-  .comparison-table tr:last-child td { border-bottom: none; }
-  .comparison-table tbody tr:hover { background: var(--lv-light); }
-
-  .stat-highlight {
+  .step {
     background: var(--lv-light);
-    border-radius: 14px; padding: 1.75rem;
-    margin: 1.5rem 0;
+    border-radius: 14px;
+    padding: 1.5rem 1.25rem;
   }
-  .stat-highlight ul { margin-bottom: 0; }
-  .stat-highlight li { font-weight: 400; }
+  .step-num {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--lv-coral);
+    margin-bottom: 0.5rem;
+  }
+  .step h3 {
+    font-size: 0.95rem; font-weight: 600; color: var(--lv-navy);
+    margin-bottom: 0.5rem; line-height: 1.4;
+  }
+  .step p {
+    font-size: 0.85rem; color: var(--lv-muted);
+    margin-bottom: 0; line-height: 1.65;
+  }
 
   .key-takeaways {
     background: var(--lv-navy-deep);
@@ -246,15 +211,10 @@
   }
   .key-takeaways strong { color: rgba(255,255,255,0.95); font-weight: 500; }
 
-  .source-note {
-    font-size: 0.78rem; color: var(--lv-muted);
-    font-style: italic; margin-top: -0.5rem; margin-bottom: 1.5rem;
-  }
-
   .cta-box {
     background: var(--lv-navy-deep);
     border-radius: 16px; padding: 2.5rem;
-    text-align: center; margin: 3rem 0;
+    text-align: center; margin: 3rem 0 0;
   }
   .cta-box h3 { color: var(--lv-white); font-size: 1.3rem; margin-bottom: 0.75rem; }
   .cta-box p { color: rgba(255,255,255,0.55); font-size: 0.9rem; margin-bottom: 1.5rem; }
@@ -278,25 +238,24 @@
   footer p { font-size: 0.72rem; color: rgba(255,255,255,0.2); }
   footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
 
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     article { padding: 2rem 1.25rem 3rem; }
     .hero-article { padding: 4rem 1.25rem 3rem; }
-    .comparison-table { font-size: 0.78rem; }
-    .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+    .steps { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="https://investment-intelligence.logivalue.com"><img src="https://logivalue.com/logo.svg" alt="Logivalue — logistics real estate investment intelligence"></a>
+  <a href="https://investment-intelligence.logivalue.com"><img src="https://logivalue.com/logo.svg" alt="Logivalue - logistics real estate investment intelligence"></a>
   <a class="nav-cta" href="https://investment-intelligence.logivalue.com/#contact">Request a briefing</a>
 </nav>
 
 <div class="hero-article">
   <div class="label">Methodology</div>
-  <h1>Supply Chain Cost Simulation for Logistics Real Estate</h1>
-  <div class="byline">By <strong><a href="https://www.linkedin.com/in/raimundpaetzmann/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none;">Raimund Paetzmann</a></strong> and <strong><a href="https://www.linkedin.com/in/knyphausen/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none;">Carl-Friedrich zu Knyphausen</a></strong> · Logivalue GmbH · Last updated April 2026</div>
+  <h1>Supply Chain Cost Simulation</h1>
+  <div class="byline">By <strong><a href="https://www.linkedin.com/in/raimundpaetzmann/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none;">Raimund Paetzmann</a></strong> and <strong><a href="https://www.linkedin.com/in/knyphausen/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none;">Carl-Friedrich zu Knyphausen</a></strong> &middot; Logivalue GmbH &middot; April 2026</div>
 </div>
 
 <article>
@@ -304,152 +263,59 @@
 <p class="updated">Last updated: April 2026</p>
 
 <div class="key-takeaways">
-  <h3>Key Takeaways</h3>
+  <h3>In Brief</h3>
   <ul>
-    <li>Supply chain cost simulation models <strong>occupier willingness-to-pay</strong> based on total logistics costs — not headline rent comparisons</li>
-    <li>The methodology uses <strong>42 site variables and 65 scoring profiles</strong> to evaluate each property against multiple tenant types</li>
-    <li>It identifies which tenants will <strong>pay premium rents and commit to long-term leases</strong> for a specific building</li>
-    <li>The spread between best-case and worst-case tenant for a single building can exceed <strong>30%</strong></li>
+    <li>We simulate the <strong>total logistics costs</strong> each occupier type would face when operating from your building</li>
+    <li>We then compare those costs across tenant profiles to identify <strong>who would pay the most - and why</strong></li>
+    <li>The spread between best-case and worst-case tenant for a single building regularly exceeds <strong>30%</strong></li>
   </ul>
 </div>
 
-<h2>What Is Supply Chain Cost Simulation?</h2>
+<h2>What It Is</h2>
 
-<p>Supply chain cost simulation is a valuation methodology that models how a building's physical characteristics, location, and operational capabilities affect a tenant's total logistics costs. Instead of comparing headline rents of similar buildings, it determines what each tenant type would actually pay — based on the building's economic value within their supply chain.</p>
+<p>Most logistics valuations compare buildings to other buildings. Supply chain cost simulation compares a building to what it does for the tenant's supply chain - and that changes what you know about its value.</p>
 
-<p>This approach produces more accurate valuations because it captures the operational reality that drives occupier decisions. A building that reduces a tenant's transport costs by 8% is worth significantly more to that tenant than a comparable building that does not — regardless of what nearby properties are charging. By modelling these economics, investors can identify the use cases that yield premium rents and long-term commitment.</p>
+<p>Transport, labour, throughput, and automation requirements vary enormously between tenant types. A building that cuts a parcel carrier's last-mile costs by 8% is worth far more to that tenant than to a cold chain operator for whom location is irrelevant. By modelling these economics, we identify the use case that unlocks the highest rent - and the tenant most likely to stay.</p>
 
-<blockquote>
-  <p>"When you understand a tenant's total supply chain cost — transport, labour, automation, throughput — you can identify which buildings will command premium rents and which tenants will stay for the long term. That's the foundation of stable cashflows."</p>
-  <cite>— Raimund Paetzmann, Occupier-Side Strategist, Logivalue</cite>
-</blockquote>
+<h2>How It Works</h2>
 
-<h2>How Does the Simulation Work?</h2>
-
-<p>The simulation evaluates each property against two comprehensive datasets: 42 site variables that describe the building and its environment, and 65 scoring profiles that represent different occupier types and their operational requirements.</p>
-
-<p>Transport accounts for approximately 58% of total logistics costs, with inventory carrying at 23% and warehousing at 11% — jointly 92% of all logistics costs (<a href="https://transportgeography.org/contents/chapter7/logistics-freight-distribution/global-logistics-costs-function/" target="_blank" rel="noopener">Armstrong &amp; Associates, via Rodrigue, <em>The Geography of Transport Systems</em></a>). Whilst this statement simplifies by averaging costs across industries, the underlying truth is that a building that meaningfully reduces any of these for its tenant is worth more than a comparable building that does not.</p>
-
-<h3>42 Site Variables</h3>
-
-<p>The site variables span four categories that capture everything a logistics occupier considers when evaluating a building:</p>
-
-<ul>
-  <li><strong>Location variables</strong> — motorway access time, distance to major population centres, proximity to port and rail terminals, local congestion patterns, time-to-customer for key delivery windows</li>
-  <li><strong>Building specification variables</strong> — clear height, floor loading capacity, dock-door count and configuration, column spacing, expansion potential, power supply capacity, automation readiness</li>
-  <li><strong>Operational variables</strong> — throughput capacity per shift, temperature control capability, cross-dock feasibility, hazardous goods compliance, yard depth and trailer staging capacity</li>
-  <li><strong>Market variables</strong> — local labour pool size and wage rates, competing supply within catchment, permitting constraints, zoning stability, tenant demand by type</li>
-</ul>
-
-<p>Of these variables, labour availability has emerged as the most decisive factor in occupier location decisions, according to <a href="https://www.cbre.com/insights/reports/european-logistics-occupier-survey-2025" target="_blank" rel="noopener">CBRE (European Logistics Occupier Survey 2025)</a> — overtaking transport connectivity and making it one of the most heavily weighted variables in modern supply chain cost simulation. Logivalue's investment intelligence certainly takes that into account.</p>
-
-<h3>65 Scoring Profiles</h3>
-
-<p>Each scoring profile represents a distinct occupier type — from high-frequency parcel sortation to pharmaceutical cold chain, from fashion e-commerce returns processing to grocery micro-fulfilment. The profiles encode how each occupier type weighs the 42 site variables, reflecting the operational priorities that drive their location and building decisions.</p>
-
-<p>For example, a parcel carrier's scoring profile weights dock-door count, motorway access time, and yard capacity heavily, while assigning lower importance to clear height and automation readiness. A grocery micro-fulfilment operator's profile inverts these priorities, weighting power supply, clear height, and urban proximity above dock-door configuration. These profiles are grounded in the operational experience of Logivalue's team, who have collectively delivered 40+ fulfilment centres across Europe for operators including Amazon, Zalando, and DHL.</p>
-
-<p>These occupier priorities are shifting rapidly. <a href="https://www.cbre.com/insights/reports/european-logistics-occupier-survey-2025" target="_blank" rel="noopener">CBRE's European Logistics Occupier Survey 2025</a> reports that 53% of occupiers now prioritise modern specifications, 50% have net-zero-by-2030 goals, and power access is moving rapidly up priority lists — all of which are encoded in Logivalue's 65 scoring profiles.</p>
-
-<h2>Traditional Inputs vs Supply Chain Simulation Inputs</h2>
-
-<table class="comparison-table">
-  <thead>
-    <tr>
-      <th>Dimension</th>
-      <th>Traditional Comparable Inputs</th>
-      <th>Supply Chain Simulation Inputs</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Location</strong></td>
-      <td>City, submarket, postcode</td>
-      <td>Motorway access time, population reach by drive-time band, labour pool depth, congestion patterns</td>
-    </tr>
-    <tr>
-      <td><strong>Building</strong></td>
-      <td>Size, age, clear height</td>
-      <td>Dock-door ratio, column grid, floor loading, automation readiness, power supply, expansion potential</td>
-    </tr>
-    <tr>
-      <td><strong>Tenant</strong></td>
-      <td>General market demand</td>
-      <td>Per-tenant-type willingness-to-pay modelled across 65 occupier profiles</td>
-    </tr>
-    <tr>
-      <td><strong>Cost basis</strong></td>
-      <td>Headline rent of comparable buildings</td>
-      <td>Total logistics cost including transport, labour, automation, and throughput capacity</td>
-    </tr>
-    <tr>
-      <td><strong>Output</strong></td>
-      <td>Market rent estimate</td>
-      <td>Ranked tenant types by willingness-to-pay, with optimal use case identified</td>
-    </tr>
-    <tr>
-      <td><strong>Accuracy</strong></td>
-      <td>Directional — useful for screening</td>
-      <td>Operationally grounded — suitable for investment decisions and due diligence</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>Why Does This Produce Better Valuations?</h2>
-
-<p>Traditional comparables answer one question: what are similar buildings renting for? Supply chain cost simulation answers a different, more valuable question: which tenant types would pay the most for this specific building, and why?</p>
-
-<p>The difference matters because two buildings at the same headline rent can have vastly different value to different occupier types. A cross-dock operator on razor-thin margins values a building's dock-door configuration and yard depth. A last-mile operator values its proximity to consumers. A cold chain tenant values its power supply and insulation potential. By modelling these economics, the simulation identifies the use case that unlocks the highest rent — often 15-30% above the comparable-based estimate.</p>
-
-<blockquote>
-  <p>"Most logistics valuations compare the building to other buildings. We compare the building to what it does for the tenant's supply chain. That tells you what the tenant will actually pay — and whether they'll stay."</p>
-  <cite>— Carl-Friedrich zu Knyphausen, Managing Director, Logivalue</cite>
-</blockquote>
-
-<h2>What the Simulation Reveals</h2>
-
-<p>A completed supply chain cost simulation produces several outputs that traditional valuation cannot:</p>
-
-<ul>
-  <li><strong>Ranked tenant types</strong> — which occupier profiles would extract the most value from this building, ordered by willingness-to-pay</li>
-  <li><strong>Optimal use case</strong> — the specific <a href="use-case-identification.html">use case</a> that maximises rental income and lease duration</li>
-  <li><strong>Rent sensitivity analysis</strong> — how changes in building specification (additional dock doors, higher power supply) affect achievable rent</li>
-  <li><strong>Tenant stability assessment</strong> — which use cases create the deepest operational dependency, reducing re-letting risk</li>
-  <li><strong>CAPEX-to-rent ratio</strong> — whether <a href="capex-quantification.html">building modifications</a> to attract a higher-value tenant justify the investment</li>
-</ul>
-
-<p>These outputs give investors a decision-grade view of a property's income potential — grounded in operational reality rather than market generalisation.</p>
-
-<h2>When Supply Chain Cost Simulation Adds the Most Value</h2>
-
-<p>The simulation is particularly valuable in three scenarios where traditional comparables fall short:</p>
-
-<ul>
-  <li><strong>Repositioning opportunities</strong> — buildings where a change in <a href="../guides/logistics-property-types.html">property type</a> or tenant type could unlock significantly higher rents. The simulation quantifies exactly what that uplift is worth</li>
-  <li><strong>Specialised assets</strong> — cold chain, automation-ready, or high-security facilities where comparable transactions are scarce and tenant economics are complex</li>
-  <li><strong>Portfolio optimisation</strong> — when evaluating multiple assets across a <a href="portfolio-strategy.html">portfolio</a>, the simulation identifies which properties are underletting relative to their operational potential</li>
-</ul>
-
-<p>For a comprehensive overview of how supply chain cost simulation fits within Logivalue's broader valuation methodology, see our <a href="../guides/logistics-property-valuation.html">complete guide to logistics real estate valuation</a>. To understand how the simulation uses location data, see our guide to <a href="catchment-area-mapping.html">catchment area mapping</a>.</p>
-
-<div class="stat-highlight">
-  <ul>
-    <li><strong>42</strong> site variables evaluated per property</li>
-    <li><strong>65</strong> unique scoring profiles for occupier demand analysis</li>
-    <li><strong>30%+</strong> spread between worst-case and best-case tenant for a single building</li>
-    <li><strong>95</strong> distinct property types modelled across 14 categories</li>
-  </ul>
+<div class="steps">
+  <div class="step">
+    <div class="step-num">Step 1</div>
+    <h3>Model the building</h3>
+    <p>We assess location, specification, and operational capacity using 42 site variables - including labour market depth, motorway access, dock configuration, and power supply.</p>
+  </div>
+  <div class="step">
+    <div class="step-num">Step 2</div>
+    <h3>Simulate occupier costs</h3>
+    <p>For each tenant type, we calculate the total logistics cost of operating from that building: transport to customers, labour, throughput constraints, and automation requirements.</p>
+  </div>
+  <div class="step">
+    <div class="step-num">Step 3</div>
+    <h3>Compare and rank</h3>
+    <p>We rank 65 occupier profiles by willingness-to-pay for your specific building, identify the optimal use case, and quantify the rent uplift it delivers.</p>
+  </div>
 </div>
 
-<h2>Sources and Further Reading</h2>
+<blockquote>
+  <p>"Most logistics valuations compare the building to other buildings. We compare the building to what it does for the tenant's supply chain. That tells you what the tenant will actually pay - and whether they'll stay."</p>
+  <cite>Carl-Friedrich zu Knyphausen, Managing Director, Logivalue</cite>
+</blockquote>
+
+<h2>What You Get</h2>
+
 <ul>
-  <li>Armstrong &amp; Associates via Rodrigue, J.-P., <a href="https://transportgeography.org/contents/chapter7/logistics-freight-distribution/global-logistics-costs-function/" target="_blank" rel="noopener"><em>The Geography of Transport Systems</em> — Global Logistics Costs by Function</a> (Texas A&amp;M University, 6th ed. 2024)</li>
-  <li>CBRE, <a href="https://www.cbre.com/insights/reports/european-logistics-occupier-survey-2025" target="_blank" rel="noopener">European Logistics Occupier Survey 2025</a></li>
+  <li><strong>Ranked tenant types</strong> - which occupier profiles would extract the most value from this building, ordered by willingness-to-pay</li>
+  <li><strong>Optimal use case</strong> - the specific <a href="use-case-identification.html">use case</a> that maximises rental income and lease duration</li>
+  <li><strong>Rent sensitivity analysis</strong> - how targeted building modifications affect achievable rent, including <a href="capex-quantification.html">CAPEX-to-rent ratios</a></li>
+  <li><strong>Tenant stability assessment</strong> - which use cases create the deepest operational dependency, reducing re-letting risk</li>
 </ul>
+
+<p>For context on where this fits within Logivalue's broader approach, see our <a href="../guides/logistics-property-valuation.html">complete guide to logistics real estate valuation</a>.</p>
 
 <div class="cta-box">
   <h3>See what your building is really worth to the right tenant</h3>
-  <p>Book a 20-minute briefing. We will show you how supply chain cost simulation identifies the tenants that deliver premium rents for your specific assets.</p>
+  <p>Book a 20-minute briefing. We will show you the tenant types that deliver premium rents for your specific assets.</p>
   <a href="https://investment-intelligence.logivalue.com/#contact">Request a briefing &rarr;</a>
 </div>
 
