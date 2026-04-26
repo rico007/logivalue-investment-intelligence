@@ -831,6 +831,7 @@
     .cap-card { padding: 1.5rem 1.25rem; }
   }
 </style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
@@ -1072,11 +1073,17 @@
 
     <div class="cta-form" id="cta-form-wrapper">
       <form id="briefing-form" novalidate>
+        <!-- Honeypot: invisible to humans, bots fill it -->
+        <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+          <label for="hp">Leave blank</label>
+          <input type="text" id="hp" name="hp" tabindex="-1" autocomplete="off">
+        </div>
         <div class="form-row">
           <input type="email" id="email" placeholder="Your work email" required autocomplete="email">
           <button type="submit" class="btn-primary">Request a briefing &rarr;</button>
         </div>
         <div class="form-error" id="form-error"></div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADDqdek9o-sqBdf-" data-theme="light" style="margin:0.75rem 0 0.25rem;"></div>
         <div class="form-consent">
           <label>
             <input type="checkbox" id="consent-comms" checked>
@@ -1130,7 +1137,11 @@ document.getElementById('briefing-form').addEventListener('submit', async functi
     var res = await fetch('https://logivalue-investment-intelligence-a.vercel.app/api/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email })
+      body: JSON.stringify({
+        email: email,
+        token: (document.querySelector('input[name="cf-turnstile-response"]') || {}).value || '',
+        hp: document.getElementById('hp').value
+      })
     });
     var data = await res.json();
     if (!res.ok) throw new Error(data.error || 'Something went wrong.');
