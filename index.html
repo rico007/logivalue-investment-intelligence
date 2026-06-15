@@ -1109,6 +1109,8 @@
 </section>
 
 <script>
+// Form render time, sent to the API so it can reject instant (bot) submissions.
+var formRenderedAt = Date.now();
 document.getElementById('briefing-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   var email = document.getElementById('email').value.trim();
@@ -1140,7 +1142,8 @@ document.getElementById('briefing-form').addEventListener('submit', async functi
       body: JSON.stringify({
         email: email,
         token: (document.querySelector('input[name="cf-turnstile-response"]') || {}).value || '',
-        hp: document.getElementById('hp').value
+        hp: document.getElementById('hp').value,
+        renderedAt: formRenderedAt
       })
     });
     var data = await res.json();
