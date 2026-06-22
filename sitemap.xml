@@ -92,6 +92,18 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://investment-intelligence.logivalue.com/blog/how-to-make-tenants-never-leave.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://investment-intelligence.logivalue.com/blog/how-to-evaluate-premium-rent-potential.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
   <!-- Team -->
   <url>
