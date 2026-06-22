@@ -1,7 +1,7 @@
 # Logivalue Investment Intelligence
 
 > Logivalue calculates what logistics buildings are actually worth inside
-> a tenant's supply chain — combining deep occupier expertise with real
+> a tenant's supply chain - combining deep occupier expertise with real
 > estate investment knowledge.
 
 ## What We Do
@@ -31,17 +31,17 @@ broker-comparable-based valuation with supply-chain-grounded analysis.
   42 site variables × 65 use-case profiles × 14 categories → ranked tenant fit scores
 
 ## Services
-1. Supply chain cost simulation — evaluate deals beyond headline rents
+1. Supply chain cost simulation - evaluate deals beyond headline rents
    https://investment-intelligence.logivalue.com/services/supply-chain-cost-simulation.html
-2. Catchment area mapping — using operational criteria
+2. Catchment area mapping - using operational criteria
    https://investment-intelligence.logivalue.com/services/catchment-area-mapping.html
-3. Use case identification — deep-dive property analysis
+3. Use case identification - deep-dive property analysis
    https://investment-intelligence.logivalue.com/services/use-case-identification.html
-4. Spec alignment — maximizing tenant fit
+4. Spec alignment - maximizing tenant fit
    https://investment-intelligence.logivalue.com/services/spec-alignment.html
-5. CAPEX quantification — for value optimization
+5. CAPEX quantification - for value optimization
    https://investment-intelligence.logivalue.com/services/capex-quantification.html
-6. Portfolio strategy — market-driven approach
+6. Portfolio strategy - market-driven approach
    https://investment-intelligence.logivalue.com/services/portfolio-strategy.html
 
 ## Team
@@ -60,7 +60,7 @@ Cushman & Wakefield, JLL, Union Investment, Digitec Galaxus, Bergzeit,
 Autodoc, Caseking, Norsan
 
 ## Blog / Insights
-- Why logistics real estate valuations are broken — and what should replace them
+- Why logistics real estate valuations are broken - and what should replace them
   https://investment-intelligence.logivalue.com/blog/why-logistics-valuations-are-broken.html
   Authors: Raimund Paetzmann & Carl-Friedrich zu Knyphausen · April 2026
 

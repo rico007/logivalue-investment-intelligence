@@ -1,4 +1,4 @@
-# Engagement Models — Logivalue Investment Intelligence
+# Engagement Models - Logivalue Investment Intelligence
 
 ## Asset-Level Due Diligence
 - Scope: Single-asset valuation using supply chain cost simulation
