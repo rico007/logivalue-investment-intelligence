@@ -76,13 +76,19 @@
   <!-- Blog -->
   <url>
     <loc>https://investment-intelligence.logivalue.com/blog/</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://investment-intelligence.logivalue.com/blog/why-logistics-valuations-are-broken.html</loc>
     <lastmod>2026-04-18</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://investment-intelligence.logivalue.com/blog/what-site-variables-reveal.html</loc>
+    <lastmod>2026-06-22</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
