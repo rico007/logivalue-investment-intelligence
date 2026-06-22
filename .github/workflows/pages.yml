@@ -13,8 +13,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
+      - uses: actions/checkout@v7
+      - uses: actions/configure-pages@v6
       # Stage only the public site. Dev docs and source-only files are kept in
       # the repo but excluded from what GitHub Pages serves.
       - name: Stage public site
@@ -32,8 +32,8 @@ jobs:
             --exclude '*.pptx'
           # Disable Jekyll so nothing is post-processed or stripped.
           touch _site/.nojekyll
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
