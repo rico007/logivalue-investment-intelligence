@@ -107,6 +107,12 @@
 
   <!-- Team -->
   <url>
+    <loc>https://investment-intelligence.logivalue.com/team/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
     <loc>https://investment-intelligence.logivalue.com/team/raimund-paetzmann.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.7</priority>

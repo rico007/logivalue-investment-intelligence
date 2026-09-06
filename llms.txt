@@ -45,6 +45,7 @@ broker-comparable-based valuation with supply-chain-grounded analysis.
    https://investment-intelligence.logivalue.com/services/portfolio-strategy.html
 
 ## Team
+Team overview: https://investment-intelligence.logivalue.com/team/
 - Raimund Paetzmann: Europe's leading occupier-side strategist for logistics
   real estate. Former head of real estate at major e-commerce operators
   (Amazon, Zalando, DIFA/Union Investment).
