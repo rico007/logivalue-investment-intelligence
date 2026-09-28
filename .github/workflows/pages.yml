@@ -25,6 +25,7 @@ jobs:
             --exclude '.github' \
             --exclude '_site' \
             --exclude '_backups' \
+            --exclude 'archive' \
             --exclude '.remember' \
             --exclude '.code-review-graph' \
             --exclude '.DS_Store' \

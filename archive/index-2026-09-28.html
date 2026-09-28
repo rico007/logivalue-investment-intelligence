@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logivalue Investment Intelligence - Logistics Real Estate Valuation for Institutional Investors</title>
+<meta name="description" content="Logivalue models what logistics buildings are actually worth inside a tenant's supply chain. 95 property types, 65 scoring profiles, 42 site variables. For institutional investors who need ground truth, not comparables.">
+<meta name="keywords" content="logistics real estate valuation, warehouse investment advisory, logistics property due diligence, supply chain cost simulation, logistics real estate investment Europe">
+<link rel="canonical" href="https://investment-intelligence.logivalue.com/">
+<meta name="msvalidate.01" content="60EED4AB56EBB038896DAF0822B10CA2" />
+<meta property="og:title" content="Logivalue Investment Intelligence">
+<meta property="og:description" content="We calculate what logistics buildings are actually worth inside a tenant's supply chain. Beyond comparables - ground truth for institutional investors.">
+<meta property="og:url" content="https://investment-intelligence.logivalue.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Logivalue GmbH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Logivalue Investment Intelligence">
+<meta name="twitter:description" content="We calculate what logistics buildings are actually worth inside a tenant's supply chain. Beyond comparables - ground truth for institutional investors.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Logivalue Investment Intelligence",
+  "description": "Logistics real estate valuation combining occupier operations knowledge with investment expertise. 95 property types, 65 scoring profiles, 42 site variables.",
+  "url": "https://investment-intelligence.logivalue.com",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Logivalue GmbH",
+    "url": "https://logivalue.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rosenthaler Str. 72a",
+      "addressLocality": "Berlin",
+      "postalCode": "10119",
+      "addressCountry": "DE"
+    }
+  },
+  "knowsAbout": [
+    "logistics real estate valuation",
+    "supply chain cost simulation",
+    "warehouse investment advisory",
+    "logistics property due diligence",
+    "catchment area mapping",
+    "CAPEX quantification"
+  ],
+  "areaServed": {
+    "@type": "Place",
+    "name": "Europe"
+  },
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Lisa Graham",
+      "jobTitle": "Real Estate Investment Advisor"
+    },
+    {
+      "@type": "Person",
+      "name": "Carl-Friedrich zu Knyphausen",
+      "jobTitle": "Logistics Operations & Warehouse Automation Expert"
+    },
+    {
+      "@type": "Person",
+      "name": "Raimund Paetzmann",
+      "jobTitle": "Occupier-Side Logistics Real Estate Strategist"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is logistics real estate investment intelligence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Investment intelligence for logistics real estate is a valuation methodology that calculates what a building is worth inside a tenant's supply chain, rather than relying solely on comparable transactions. It combines occupier operations expertise with real estate investment analysis to model actual occupier willingness-to-pay across 95 distinct property types."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many types of logistics properties exist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are 95 distinct logistics property types across 14 categories, including cross-dock facilities, last-mile hubs, cold chain warehouses, and city delivery centers. Each type has different cost structures, tenant requirements, and rental economics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are broker comparables insufficient for logistics real estate valuation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Broker comparables compare headline rents of superficially similar buildings but don't account for supply chain economics - how a building's specification, location, and design affect a tenant's total logistics cost. Two warehouses at the same rent can have vastly different operational value to different tenant types. Investment intelligence models what each tenant type would actually pay and why."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is supply chain cost simulation in real estate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Supply chain cost simulation evaluates real estate deals beyond headline rents by modeling how a building's characteristics affect a tenant's total logistics costs - including transport, labor, automation requirements, and throughput capacity. This determines the building's true economic value within the tenant's supply chain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What variables determine logistics property value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Logivalue evaluates logistics properties against 42 site variables and 65 scoring profiles. Key variables include location (proximity to distribution networks, labor markets, transport hubs), building specification (clear height, floor loading, dock doors, column spacing), operational suitability (automation readiness, temperature control, cross-dock capability), and market dynamics (supply scarcity, permitting constraints, tenant demand by type)."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 300; font-display: swap; src: url(fonts/poppins-300.woff2) format('woff2'); }
+  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/poppins-400.woff2) format('woff2'); }
+  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap; src: url(fonts/poppins-500.woff2) format('woff2'); }
+  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/poppins-600.woff2) format('woff2'); }
+  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/poppins-700.woff2) format('woff2'); }
+  :root {
+    --lv-navy: #1A3B5D;
+    --lv-navy-deep: #0f2640;
+    --lv-blue: #5A74B8;
+    --lv-dark-blue: #264F7A;
+    --lv-coral: #FF8A6D;
+    --lv-coral-bright: #FF6B4A;
+    --lv-teal: #3DA5A1;
+    --lv-cyan: #68DCD8;
+    --lv-gold: #F3C770;
+    --lv-light: #F4F6FA;
+    --lv-white: #ffffff;
+    --lv-text: #1E293B;
+    --lv-muted: #64748B;
+    --lv-border: rgba(255,255,255,0.08);
+    --font: 'Poppins', system-ui, sans-serif;
+    --radius: 20px;
+    --radius-sm: 14px;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --glass: rgba(255,255,255,0.06);
+    --glass-border: rgba(255,255,255,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    color: var(--lv-text);
+    background: var(--lv-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 0.9rem 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(15, 38, 64, 0.6);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.4s var(--ease);
+  }
+  .nav-logo img { height: 30px; width: auto; display: block; }
+  .nav-cta {
+    background: var(--lv-coral); color: var(--lv-white);
+    padding: 0.55rem 1.5rem; border-radius: 10px;
+    font-weight: 600; font-size: 0.82rem;
+    text-decoration: none; transition: all 0.25s var(--ease);
+    cursor: pointer; letter-spacing: 0.01em;
+  }
+  .nav-cta:hover {
+    background: var(--lv-coral-bright);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(255, 138, 109, 0.35);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--lv-navy-deep);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    padding: 8rem 2.5rem 6rem;
+  }
+
+  /* Animated mesh gradient blobs */
+  .hero-blob {
+    position: absolute; border-radius: 50%;
+    filter: blur(100px); opacity: 0.12;
+    pointer-events: none; will-change: transform;
+  }
+  .hero-blob-1 {
+    width: 600px; height: 600px;
+    background: var(--lv-blue);
+    top: -15%; right: -10%;
+    animation: blob-drift 18s ease-in-out infinite alternate;
+  }
+  .hero-blob-2 {
+    width: 450px; height: 450px;
+    background: var(--lv-coral);
+    bottom: -10%; left: -5%;
+    animation: blob-drift 22s ease-in-out infinite alternate-reverse;
+  }
+  .hero-blob-3 {
+    width: 350px; height: 350px;
+    background: var(--lv-teal);
+    top: 30%; left: 40%;
+    animation: blob-drift 15s ease-in-out infinite alternate;
+  }
+  @keyframes blob-drift {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -20px) scale(1.05); }
+    66% { transform: translate(-20px, 15px) scale(0.95); }
+    100% { transform: translate(10px, -10px) scale(1.02); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-blob { animation: none; }
+    [data-animate] { animation: none !important; opacity: 1 !important; transform: none !important; }
+  }
+
+  .hero-inner {
+    max-width: 1100px; margin: 0 auto; width: 100%;
+    position: relative; z-index: 2;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--glass);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    padding: 0.45rem 1.2rem; border-radius: 100px;
+    font-size: 0.72rem; font-weight: 600;
+    color: var(--lv-cyan); letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 2.5rem;
+    animation: fadeInUp 0.7s var(--ease) both;
+  }
+  .hero-tag::before {
+    content: ''; width: 6px; height: 6px;
+    background: var(--lv-cyan); border-radius: 50%;
+    box-shadow: 0 0 8px var(--lv-cyan);
+    animation: pulse-dot 2.5s ease infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--lv-cyan); }
+    50% { opacity: 0.3; box-shadow: 0 0 2px var(--lv-cyan); }
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 5.5vw, 4rem);
+    color: var(--lv-white);
+    line-height: 1.1; margin-bottom: 1.75rem;
+    font-weight: 600; letter-spacing: -0.02em;
+    animation: fadeInUp 0.7s var(--ease) 0.1s both;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--lv-coral) 0%, var(--lv-gold) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-sub {
+    font-size: 1.15rem; color: rgba(255,255,255,0.55);
+    max-width: 580px; line-height: 1.8;
+    margin-bottom: 2.75rem; font-weight: 300;
+    animation: fadeInUp 0.7s var(--ease) 0.2s both;
+  }
+  .hero-cta-group {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    animation: fadeInUp 0.7s var(--ease) 0.3s both;
+  }
+  .btn-primary {
+    background: var(--lv-coral); color: var(--lv-white);
+    padding: 0.85rem 2rem; border-radius: 12px;
+    font-weight: 600; font-size: 0.92rem;
+    text-decoration: none; transition: all 0.25s var(--ease);
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background: var(--lv-coral-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(255, 107, 74, 0.3);
+  }
+  .btn-ghost {
+    background: var(--glass);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    color: rgba(255,255,255,0.7); padding: 0.85rem 2rem;
+    border-radius: 12px; font-weight: 500; font-size: 0.92rem;
+    text-decoration: none; transition: all 0.25s var(--ease);
+    cursor: pointer;
+  }
+  .btn-ghost:hover {
+    border-color: rgba(255,255,255,0.25);
+    color: var(--lv-white);
+    background: rgba(255,255,255,0.1);
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── STAT BAR ── */
+  .stat-bar {
+    background: var(--lv-navy);
+    padding: 3.5rem 2.5rem;
+    position: relative;
+  }
+  .stat-bar::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--lv-blue) 20%, var(--lv-teal) 50%, var(--lv-coral) 80%, transparent 100%);
+    opacity: 0.4;
+  }
+  .stat-bar-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .stat-item {
+    text-align: center; padding: 1.25rem;
+    background: var(--glass);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    transition: all 0.3s var(--ease);
+  }
+  .stat-item:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+  }
+  .stat-item h3 {
+    font-size: 2.2rem; font-weight: 700;
+    margin-bottom: 0.2rem;
+    background: linear-gradient(135deg, var(--lv-cyan), var(--lv-teal));
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .stat-item p { font-size: 0.78rem; color: rgba(255,255,255,0.45); font-weight: 400; }
+
+  /* ── SECTIONS ── */
+  section { padding: 7rem 2.5rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--lv-coral); margin-bottom: 0.75rem;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+  }
+  .section-label::before {
+    content: ''; width: 24px; height: 2px;
+    background: var(--lv-coral); border-radius: 2px;
+  }
+  .section-title {
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    color: var(--lv-navy); line-height: 1.15;
+    margin-bottom: 1rem; font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .section-subtitle {
+    font-size: 1.05rem; color: var(--lv-muted);
+    max-width: 580px; line-height: 1.8; font-weight: 300;
+  }
+
+  /* ── PROBLEM ── */
+  .problem { background: var(--lv-light); }
+  .problem-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; margin-top: 3.5rem; align-items: start;
+  }
+  .problem-text h3 {
+    font-size: 1.5rem; color: var(--lv-navy);
+    margin-bottom: 1.25rem; font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .problem-text p {
+    font-size: 0.95rem; color: var(--lv-muted);
+    line-height: 1.85; margin-bottom: 1rem; font-weight: 300;
+  }
+  .problem-text strong { font-weight: 600; color: var(--lv-text); }
+  .problem-visual {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;
+  }
+  .building-type {
+    background: var(--lv-white);
+    border: 1px solid #E8ECF2;
+    border-radius: var(--radius-sm); padding: 1.5rem 1.25rem;
+    transition: all 0.3s var(--ease);
+    cursor: default;
+  }
+  .building-type:hover {
+    border-color: transparent;
+    box-shadow: 0 12px 40px rgba(26, 59, 93, 0.08);
+    transform: translateY(-4px);
+  }
+  .bt-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 0.75rem;
+  }
+  .bt-crossdock .bt-icon { background: rgba(255,138,109,0.1); }
+  .bt-lastmile .bt-icon { background: rgba(61,165,161,0.1); }
+  .bt-coldchain .bt-icon { background: rgba(90,116,184,0.1); }
+  .bt-citydelivery .bt-icon { background: rgba(243,199,112,0.12); }
+  .bt-icon svg { width: 20px; height: 20px; }
+  .building-type h4 {
+    font-size: 0.85rem; font-weight: 600;
+    color: var(--lv-navy); margin-bottom: 0.3rem;
+  }
+  .building-type p {
+    font-size: 0.76rem; color: var(--lv-muted); line-height: 1.55; font-weight: 300;
+  }
+
+  /* ── TWO SIDES ── */
+  .two-sides { background: var(--lv-white); }
+  .sides-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; margin-top: 3.5rem;
+  }
+  .side-card {
+    border-radius: var(--radius); padding: 2.75rem;
+    position: relative; overflow: hidden;
+    transition: transform 0.3s var(--ease);
+  }
+  .side-card:hover { transform: translateY(-3px); }
+  .side-occupier {
+    background: linear-gradient(145deg, var(--lv-navy-deep) 0%, var(--lv-navy) 100%);
+    color: var(--lv-white);
+  }
+  .side-occupier::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--lv-teal), var(--lv-cyan));
+  }
+  /* Decorative glow */
+  .side-occupier::after {
+    content: ''; position: absolute; top: -40%; right: -20%;
+    width: 280px; height: 280px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(104,220,216,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .side-investor {
+    background: var(--lv-white);
+    color: var(--lv-navy);
+    border: 1px solid #E8ECF2;
+    box-shadow: 0 2px 16px rgba(26, 59, 93, 0.04);
+  }
+  .side-investor::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--lv-coral), var(--lv-gold));
+  }
+  .side-card .side-tag {
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .side-occupier .side-tag { color: var(--lv-cyan); }
+  .side-investor .side-tag { color: var(--lv-coral); }
+  .side-card h3 {
+    font-size: 1.3rem; margin-bottom: 1rem; line-height: 1.35;
+    font-weight: 600; letter-spacing: -0.01em;
+  }
+  .side-card p {
+    font-size: 0.9rem; line-height: 1.85; font-weight: 300;
+  }
+  .side-occupier p { color: rgba(255,255,255,0.6); }
+  .side-investor p { color: var(--lv-muted); }
+  .side-card .side-logos {
+    margin-top: 1.75rem; padding-top: 1.5rem;
+    font-size: 0.78rem; font-weight: 400;
+  }
+  .side-occupier .side-logos {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.35);
+  }
+  .side-investor .side-logos {
+    border-top: 1px solid #E8ECF2;
+    color: var(--lv-muted);
+  }
+  .side-logos span { font-weight: 600; }
+
+  /* ── WHAT WE DO ── */
+  .what-we-do { background: var(--lv-light); }
+  .capabilities-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; margin-top: 3.5rem;
+  }
+  .cap-card {
+    background: var(--lv-white);
+    border: 1px solid #E8ECF2;
+    border-radius: var(--radius-sm); padding: 2rem 1.75rem;
+    transition: all 0.3s var(--ease);
+    position: relative; overflow: hidden;
+    cursor: default;
+  }
+  .cap-card::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--lv-teal), var(--lv-blue));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s var(--ease);
+  }
+  .cap-card:hover::after { transform: scaleX(1); }
+  .cap-card:hover {
+    border-color: transparent;
+    box-shadow: 0 16px 48px rgba(26, 59, 93, 0.07);
+    transform: translateY(-4px);
+  }
+  .cap-card .cap-num {
+    font-size: 2.8rem; font-weight: 700; line-height: 1;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, rgba(90,116,184,0.12), rgba(61,165,161,0.08));
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .cap-card h4 {
+    font-size: 0.92rem; font-weight: 600;
+    color: var(--lv-navy); margin-bottom: 0.5rem;
+  }
+  .cap-card p {
+    font-size: 0.82rem; color: var(--lv-muted);
+    line-height: 1.7; font-weight: 300;
+  }
+
+  /* ── REFERENCES ── */
+  .references { background: var(--lv-white); border-top: 1px solid #E8ECF2; }
+  .references .section-label { justify-content: center; }
+  .references .section-inner { text-align: center; }
+  .logo-grid {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; align-items: center;
+    gap: 2.5rem 3.5rem; margin-top: 2.5rem;
+  }
+  .logo-item {
+    height: 28px; width: auto;
+    filter: grayscale(100%) brightness(1.4) contrast(0.5);
+    opacity: 0.55;
+    transition: all 0.3s var(--ease);
+    user-select: none;
+  }
+  .logo-item:hover {
+    filter: grayscale(0%) brightness(1) contrast(1);
+    opacity: 1;
+  }
+  .logo-item.logo-2x { height: 56px; }
+
+  /* ── TEAM ── */
+  .team { background: var(--lv-white); }
+  .team-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 3.5rem;
+  }
+  .team-card {
+    text-align: center;
+    border-radius: var(--radius);
+    padding: 2.5rem 1.75rem 2rem;
+    border: 1px solid #E8ECF2;
+    transition: all 0.3s var(--ease);
+    position: relative; overflow: hidden;
+  }
+  .team-card:hover {
+    border-color: transparent;
+    box-shadow: 0 12px 40px rgba(26, 59, 93, 0.07);
+    transform: translateY(-3px);
+  }
+  .team-avatar {
+    width: 192px; height: 192px;
+    border-radius: 50%;
+    margin: 0 auto 1.25rem;
+    overflow: hidden;
+    border: 3px solid #E8ECF2;
+    transition: border-color 0.3s var(--ease);
+  }
+  .team-card:hover .team-avatar { border-color: var(--lv-teal); }
+  .team-avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .team-card h4 {
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--lv-navy); margin-bottom: 0.25rem;
+  }
+  .team-card .team-former {
+    font-size: 0.72rem; font-weight: 600;
+    color: var(--lv-coral); letter-spacing: 0.04em;
+    text-transform: uppercase; margin-bottom: 0.75rem;
+  }
+  .team-card p {
+    font-size: 0.82rem; color: var(--lv-muted);
+    line-height: 1.7; font-weight: 300;
+  }
+  .team-footnote {
+    margin-top: 2.5rem;
+    padding: 1.75rem;
+    background: var(--lv-light);
+    border-radius: var(--radius-sm);
+    text-align: center;
+  }
+  .team-footnote p {
+    font-size: 0.88rem; color: var(--lv-muted);
+    line-height: 1.75; font-weight: 300;
+    max-width: 700px; margin: 0 auto;
+  }
+  .team-footnote strong { font-weight: 600; color: var(--lv-navy); }
+  .team-more {
+    display: inline-block; margin-top: 1.5rem;
+    font-size: 0.85rem; font-weight: 600;
+    color: var(--lv-teal); text-decoration: none;
+    transition: opacity 0.2s var(--ease);
+  }
+  .team-more:hover { opacity: 0.75; }
+
+  /* ── KICKER ── */
+  .kicker {
+    background: var(--lv-navy-deep);
+    text-align: center; padding: 7rem 2.5rem;
+    position: relative; overflow: hidden;
+  }
+  .kicker-blob {
+    position: absolute; border-radius: 50%;
+    filter: blur(80px); opacity: 0.08; pointer-events: none;
+  }
+  .kicker-blob-1 {
+    width: 400px; height: 400px;
+    background: var(--lv-coral);
+    top: -20%; right: 10%;
+  }
+  .kicker-blob-2 {
+    width: 300px; height: 300px;
+    background: var(--lv-teal);
+    bottom: -15%; left: 15%;
+  }
+  .kicker-inner {
+    max-width: 680px; margin: 0 auto;
+    position: relative; z-index: 2;
+  }
+  .kicker blockquote {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: var(--lv-white); line-height: 1.35;
+    margin-bottom: 1.25rem; font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .kicker blockquote em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--lv-coral), var(--lv-gold));
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .kicker .kicker-sub {
+    font-size: 1.05rem; color: rgba(255,255,255,0.5);
+    margin-bottom: 0.35rem; font-weight: 300;
+  }
+  .kicker .kicker-sub2 {
+    font-size: 0.95rem; color: rgba(255,255,255,0.35);
+    margin-bottom: 2.75rem; font-weight: 400;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: var(--lv-white);
+    padding: 6rem 2.5rem; text-align: center;
+    position: relative;
+  }
+  .cta-section .section-label { justify-content: center; }
+  .cta-section .section-title { margin-bottom: 0.75rem; }
+  .cta-section > .section-inner > p {
+    font-size: 1rem; color: var(--lv-muted);
+    margin-bottom: 2.25rem; max-width: 480px;
+    margin-left: auto; margin-right: auto;
+    font-weight: 300; line-height: 1.75;
+  }
+
+  /* Form */
+  .cta-form {
+    max-width: 480px; margin: 0 auto;
+    text-align: left;
+  }
+  .form-row {
+    display: flex; gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .form-row input[type="email"] {
+    flex: 1;
+    font-family: var(--font);
+    font-size: 0.9rem; font-weight: 400;
+    padding: 0.85rem 1.25rem;
+    border-radius: 12px;
+    border: 1px solid #D5DAE3;
+    background: var(--lv-light);
+    color: var(--lv-text);
+    outline: none;
+    transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  }
+  .form-row input[type="email"]::placeholder {
+    color: #94A3B8; font-weight: 300;
+  }
+  .form-row input[type="email"]:focus {
+    border-color: var(--lv-teal);
+    box-shadow: 0 0 0 3px rgba(61, 165, 161, 0.12);
+  }
+  .form-row .btn-primary {
+    font-size: 0.9rem; padding: 0.85rem 1.75rem;
+    white-space: nowrap; border: none; cursor: pointer;
+  }
+  .form-consent {
+    margin-bottom: 0.75rem;
+  }
+  .form-consent label {
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    font-size: 0.76rem; color: var(--lv-muted);
+    line-height: 1.5; cursor: pointer; font-weight: 300;
+  }
+  .form-consent input[type="checkbox"] {
+    appearance: none; -webkit-appearance: none;
+    width: 18px; height: 18px; min-width: 18px;
+    border: 1.5px solid #C5CCD8;
+    border-radius: 5px;
+    background: var(--lv-white);
+    cursor: pointer;
+    transition: all 0.2s var(--ease);
+    position: relative; top: 1px;
+  }
+  .form-consent input[type="checkbox"]:checked {
+    background: var(--lv-teal);
+    border-color: var(--lv-teal);
+  }
+  .form-consent input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute; top: 3px; left: 5.5px;
+    width: 5px; height: 9px;
+    border: solid var(--lv-white); border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .form-consent input[type="checkbox"]:focus-visible {
+    box-shadow: 0 0 0 3px rgba(61, 165, 161, 0.2);
+  }
+  .form-consent a {
+    color: var(--lv-teal); text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .form-consent a:hover { color: var(--lv-coral); }
+  .form-success {
+    display: none;
+    text-align: center; padding: 2rem 0;
+  }
+  .form-success.visible { display: block; }
+  .form-success .success-icon {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: rgba(61, 165, 161, 0.1);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem;
+  }
+  .form-success .success-icon svg { width: 28px; height: 28px; }
+  .form-success h3 {
+    font-size: 1.2rem; font-weight: 600; color: var(--lv-navy);
+    margin-bottom: 0.4rem;
+  }
+  .form-success p {
+    font-size: 0.9rem; color: var(--lv-muted); font-weight: 300;
+  }
+  .form-error {
+    font-size: 0.76rem; color: #E74C3C;
+    margin-bottom: 0.75rem; display: none;
+  }
+  .form-error.visible { display: block; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--lv-navy-deep);
+    padding: 2.5rem 2.5rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1.25rem;
+  }
+  .footer-left {
+    display: flex; align-items: center; gap: 1.25rem;
+  }
+  .footer-logo img {
+    height: 24px; width: auto; opacity: 0.7;
+    transition: opacity 0.3s;
+  }
+  .footer-logo:hover img { opacity: 0.9; }
+  .footer-company {
+    font-size: 0.75rem; color: rgba(255,255,255,0.3);
+    font-weight: 400;
+  }
+  .footer-links {
+    display: flex; gap: 1.25rem; align-items: center;
+  }
+  .footer-links a {
+    font-size: 0.75rem; color: rgba(255,255,255,0.35);
+    text-decoration: none; transition: color 0.25s var(--ease);
+    cursor: pointer;
+  }
+  .footer-links a:hover { color: var(--lv-cyan); }
+  .footer-sep {
+    width: 3px; height: 3px; border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+  }
+  .footer-bottom {
+    max-width: 1100px; margin: 1.25rem auto 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    text-align: center;
+  }
+  .footer-bottom p { font-size: 0.68rem; color: rgba(255,255,255,0.18); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .capabilities-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .stat-bar-inner { grid-template-columns: repeat(2, 1fr); }
+    .problem-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .sides-grid { grid-template-columns: 1fr; }
+    .capabilities-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-left { flex-direction: column; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+    section { padding: 5rem 1.5rem; }
+  }
+  @media (max-width: 480px) {
+    .stat-bar-inner { grid-template-columns: 1fr; gap: 0.75rem; }
+    .problem-visual { grid-template-columns: 1fr; }
+    .hero { padding: 7rem 1.25rem 4rem; min-height: auto; padding-bottom: 4rem; }
+    nav { padding: 0.75rem 1.25rem; }
+    .hero-cta-group { flex-direction: column; }
+    .btn-primary, .btn-ghost { text-align: center; justify-content: center; width: 100%; }
+    .side-card { padding: 2rem 1.5rem; }
+    .cap-card { padding: 1.5rem 1.25rem; }
+  }
+</style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="https://logivalue.com">
+    <img src="https://logivalue.com/logo.svg" alt="Logivalue - logistics real estate investment intelligence">
+  </a>
+  <a class="nav-cta" href="#contact">Get in touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-blob hero-blob-3"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">Investment Intelligence</div>
+    <h1>Every broker gives you comparables.<br>We give you <em>ground truth.</em></h1>
+    <p class="hero-sub">Logivalue calculates what a logistics building is actually worth inside a tenant's supply chain - combining deep occupier expertise with real estate investment knowledge.</p>
+    <div class="hero-cta-group">
+      <a href="#contact" class="btn-primary">Request a briefing &rarr;</a>
+      <a href="#how" class="btn-ghost">See how it works</a>
+    </div>
+  </div>
+</section>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="stat-bar-inner">
+    <div class="stat-item">
+      <h3>40+</h3>
+      <p>Warehouses delivered</p>
+    </div>
+    <div class="stat-item">
+      <h3>&euro;1.2B+</h3>
+      <p>CAPEX managed</p>
+    </div>
+    <div class="stat-item">
+      <h3>75+</h3>
+      <p>Years combined experience</p>
+    </div>
+    <div class="stat-item">
+      <h3>AI</h3>
+      <p>Supported decision engine</p>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem" id="why">
+  <div class="section-inner">
+    <div class="section-label">The problem</div>
+    <h2 class="section-title">Broker-based advisory is obsolete.</h2>
+    <p class="section-subtitle">Europe's logistics market reached record activity in 2025, with 28.1 million sqm of take-up - 8% above the pre-pandemic average - according to <a href="https://www.jll.com/en-belux/insights/market-dynamics/emea-industrial" target="_blank" rel="noopener">JLL (Q4 2025)</a>. At this scale and maturity, comparables alone can no longer tell you what a building is worth.</p>
+
+    <div class="problem-grid">
+      <div class="problem-text">
+        <h3>Logistics real estate is not one asset class - it's 95.</h3>
+        <p>Our framework maps 95 distinct property types across 14 categories, each evaluated against 65 unique scoring profiles and 42 site variables. A cross-dock and a temperature-controlled fulfilment centre have fundamentally different requirements - any meaningful due diligence must reflect this.</p>
+        <p>Cookie-cutter assessments don't cut it. Every building needs a customised evaluation based on what it is and who it's for.</p>
+        <p><strong>Same asset class. Completely different economics.</strong> Comparables miss this entirely.</p>
+      </div>
+      <div class="problem-visual">
+        <div class="building-type bt-crossdock">
+          <div class="bt-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FF8A6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+          <h4>Cross-Dock</h4>
+          <p>Razor-thin margins. Cost-optimised. Every cent on rent counts.</p>
+        </div>
+        <div class="building-type bt-lastmile">
+          <div class="bt-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#3DA5A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/></svg>
+          </div>
+          <h4>Last-Mile Hub</h4>
+          <p>Premium location value. Drop density drives willingness to pay.</p>
+        </div>
+        <div class="building-type bt-coldchain">
+          <div class="bt-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#5A74B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="m8 4 4 4 4-4"/><path d="m8 20 4-4 4 4"/><path d="M2 12h20"/><path d="m4 8 4 4-4 4"/><path d="m20 8-4 4 4 4"/></svg>
+          </div>
+          <h4>Cold Chain</h4>
+          <p>Specialised infrastructure. High build cost, high tenant lock-in.</p>
+        </div>
+        <div class="building-type bt-citydelivery">
+          <div class="bt-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          </div>
+          <h4>City Delivery</h4>
+          <p>Urban proximity premium. Scarce supply, strong demand.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO SIDES -->
+<section class="two-sides" id="how">
+  <div class="section-inner">
+    <div class="section-label">Our edge</div>
+    <h2 class="section-title">We understand both sides of the table.</h2>
+    <p class="section-subtitle">That's what makes Investment Intelligence fundamentally different from brokerage or buy-side advisory.</p>
+
+    <div class="sides-grid">
+      <div class="side-card side-occupier">
+        <div class="side-tag">Occupier side</div>
+        <h3>We model what each tenant type would actually pay - and why.</h3>
+        <p>A cross-dock operator runs on razor-thin margins - they'll squeeze every cent on rent. A last-mile hub in the right urban location? That tenant pays a premium because proximity and drop density save them multiples of what they spend on the building. We model these network economics to determine true occupier value.</p>
+        <div class="side-logos">First-hand experience at <span>Zalando</span>, <span>Amazon</span>, <span>DHL</span> &amp; others</div>
+      </div>
+      <div class="side-card side-investor">
+        <div class="side-tag">Investor side</div>
+        <h3>We help you navigate an increasingly complex landscape.</h3>
+        <p>Land is scarce, permitting creates constraints, construction costs are high, rental growth has slowed, and leasing markets are tricky. <a href="https://www.prologisce.eu/about/news-press-releases/prologis-research-europes-eu500bn-logistics-market-faces-eu150bn-supply" target="_blank" rel="noopener">Prologis Research (2025)</a> estimates a €150 billion structural supply gap across Europe's logistics real estate market, with entitlement timelines doubling over the past five years. We identify the right use case for each asset and quantify what it takes to optimise it - so your acquisition decisions are grounded in operational reality.</p>
+        <div class="side-logos">Investment perspective from inside <span>Prologis</span> and years of external advisory</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="what-we-do" id="capabilities">
+  <div class="section-inner">
+    <div class="section-label">In practice</div>
+    <h2 class="section-title">What Investment Intelligence delivers.</h2>
+    <p class="section-subtitle">From quick check due diligence to occupier value mapping and building requirements - packaged so the decision is easy. According to <a href="https://www.cbre.com/insights/reports/european-logistics-occupier-survey-2025" target="_blank" rel="noopener">CBRE's European Logistics Occupier Survey 2025</a>, 53% of occupiers now prioritise modern warehouse specifications, and labour availability has become the most decisive location factor - both areas where occupier-side analysis drives real valuation differences.</p>
+
+    <div class="capabilities-grid">
+      <div class="cap-card">
+        <div class="cap-num">01</div>
+        <h4>Supply chain cost simulation</h4>
+        <p>Evaluate deals by simulating occupiers' total supply chain costs - not just headline rents.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num">02</div>
+        <h4>Catchment area mapping</h4>
+        <p>Map catchment areas against real operational criteria that occupiers actually use.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num">03</div>
+        <h4>Use case identification</h4>
+        <p>Identify the highest-value use case for each building and site through deep-dive analysis.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num">04</div>
+        <h4>Spec alignment</h4>
+        <p>Align building specifications with target occupier profiles to maximise tenant fit.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num">05</div>
+        <h4>CAPEX quantification</h4>
+        <p>Quantify the capital expenditure required to optimise tenancy and unlock value.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num">06</div>
+        <h4>Portfolio strategy</h4>
+        <p>Develop future-proof portfolio strategy based on market dynamics and occupier trends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section class="references">
+  <div class="section-inner">
+    <div class="section-label">Our references</div>
+    <div class="logo-grid">
+      <img class="logo-item" src="img/logos/zalando.svg" alt="Zalando logo - Logivalue client">
+      <img class="logo-item" src="img/logos/amazon.svg" alt="Amazon logo - Logivalue client">
+      <img class="logo-item" src="img/logos/dhl.svg" alt="DHL logo - Logivalue client">
+      <img class="logo-item logo-2x" src="img/logos/prologis.svg" alt="Prologis logo - Logivalue client">
+      <img class="logo-item logo-2x" src="img/logos/arvato.svg" alt="arvato Bertelsmann logo - Logivalue client">
+      <img class="logo-item" src="img/logos/delivery-hero.svg" alt="Delivery Hero logo - Logivalue client">
+      <img class="logo-item" src="img/logos/cushman-wakefield.svg" alt="Cushman &amp; Wakefield logo - Logivalue client">
+      <img class="logo-item" src="img/logos/jll.svg" alt="JLL logo - Logivalue client">
+      <img class="logo-item" src="img/logos/union-investment.svg" alt="Union Investment logo - Logivalue client">
+      <img class="logo-item" src="img/logos/digitec-galaxus.png" alt="Digitec Galaxus logo - Logivalue client">
+      <img class="logo-item" src="img/logos/bergzeit.svg" alt="Bergzeit logo - Logivalue client">
+      <img class="logo-item" src="img/logos/autodoc.svg" alt="Autodoc logo - Logivalue client">
+      <img class="logo-item" src="img/logos/caseking.svg" alt="Caseking logo - Logivalue client">
+      <img class="logo-item" src="img/logos/norsan.svg" alt="Norsan logo - Logivalue client">
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="section-inner">
+    <div class="section-label">Expert team</div>
+    <h2 class="section-title">Former operators, now investment advisors.</h2>
+    <p class="section-subtitle">We've been on your side of the table - and the tenant's.</p>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar"><img src="img/lisa-graham.png" alt="Lisa Graham, real estate investment advisor at Logivalue"></div>
+        <h4>Lisa Graham (external)</h4>
+        <div class="team-former">Real Estate Investment</div>
+        <p>Deep real estate expertise with extensive experience in property valuation, market analysis, and investment strategy for institutional investors.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="img/carl-friedrich.png" alt="Carl-Friedrich zu Knyphausen, logistics operations and warehouse automation expert"></div>
+        <h4>Carl-Friedrich zu Knyphausen</h4>
+        <div class="team-former">Former DHL, arvato, Zalando</div>
+        <p>Former logistics operations leader with hands-on experience managing &amp; automating warehouse facilities and supply chain networks across Europe.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="img/raimund-paetzmann.png" alt="Raimund Paetzmann, Europe's leading occupier-side logistics real estate strategist"></div>
+        <h4>Raimund Paetzmann</h4>
+        <div class="team-former">Former Amazon, Zalando, DIFA/ Union Investment</div>
+        <p>Europe's leading occupier-side strategist for logistics real estate. One of the few professionals who masters both operations and real estate from A to Z - from strategy and location to building design, deal optimization, and delivery of 40+ fulfillment centers across Europe.</p>
+      </div>
+    </div>
+
+    <div class="team-footnote">
+      <p>This founding team combines <strong>real estate investment acumen</strong> with <strong>operational logistics experience</strong> - a positioning that is credible and nearly impossible to replicate, differentiating us from traditional brokers, RE consultants, and Big 4 advisors.</p>
+    </div>
+
+    <a class="team-more" href="team/">Meet the team &rarr;</a>
+  </div>
+</section>
+
+<!-- KICKER -->
+<section class="kicker">
+  <div class="kicker-blob kicker-blob-1"></div>
+  <div class="kicker-blob kicker-blob-2"></div>
+  <div class="kicker-inner">
+    <blockquote>We don't guess. We calculate what a building is worth <em>inside a supply chain.</em></blockquote>
+    <p class="kicker-sub">That's not brokerage. That's not buy-side advisory.</p>
+    <p class="kicker-sub2">That's Investment Intelligence.</p>
+    <a href="#contact" class="btn-primary">Let's talk &rarr;</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="section-inner">
+    <div class="section-label">Get started</div>
+    <h2 class="section-title">Ready to get a competitive edge?</h2>
+    <p>Book a 20-minute briefing with our team. We'll show you what Investment Intelligence looks like for your portfolio.</p>
+
+    <div class="cta-form" id="cta-form-wrapper">
+      <form id="briefing-form" novalidate>
+        <!-- Honeypot: invisible to humans, bots fill it -->
+        <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+          <label for="hp">Leave blank</label>
+          <input type="text" id="hp" name="hp" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-row">
+          <input type="email" id="email" placeholder="Your work email" required autocomplete="email">
+          <button type="submit" class="btn-primary">Request a briefing &rarr;</button>
+        </div>
+        <div class="form-error" id="form-error"></div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADDqdek9o-sqBdf-" data-theme="light" style="margin:0.75rem 0 0.25rem;"></div>
+        <div class="form-consent">
+          <label>
+            <input type="checkbox" id="consent-comms" checked>
+            <span>I agree to receive other communications from Logivalue GmbH.</span>
+          </label>
+        </div>
+        <div class="form-consent">
+          <label>
+            <input type="checkbox" id="consent-data" checked>
+            <span>I agree that Logivalue GmbH may store and process my personal data in line with the <a href="https://logivalue.com/data-security" target="_blank" rel="noopener">data security policy</a>.</span>
+          </label>
+        </div>
+      </form>
+      <div class="form-success" id="form-success">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3DA5A1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h3>Thank you!</h3>
+        <p>We'll be in touch shortly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Form render time, sent to the API so it can reject instant (bot) submissions.
+var formRenderedAt = Date.now();
+document.getElementById('briefing-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  var email = document.getElementById('email').value.trim();
+  var consentComms = document.getElementById('consent-comms').checked;
+  var consentData = document.getElementById('consent-data').checked;
+  var errorEl = document.getElementById('form-error');
+  var submitBtn = this.querySelector('button[type="submit"]');
+
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errorEl.textContent = 'Please enter a valid email address.';
+    errorEl.classList.add('visible');
+    return;
+  }
+  if (!consentComms || !consentData) {
+    errorEl.textContent = 'Please accept both consent checkboxes to continue.';
+    errorEl.classList.add('visible');
+    return;
+  }
+  errorEl.classList.remove('visible');
+
+  // Disable button while sending
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
+  try {
+    var res = await fetch('https://logivalue-investment-intelligence-a.vercel.app/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: email,
+        token: (document.querySelector('input[name="cf-turnstile-response"]') || {}).value || '',
+        hp: document.getElementById('hp').value,
+        renderedAt: formRenderedAt
+      })
+    });
+    var data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Something went wrong.');
+
+    document.getElementById('briefing-form').style.display = 'none';
+    document.getElementById('form-success').classList.add('visible');
+  } catch (err) {
+    errorEl.textContent = err.message || 'Something went wrong. Please try again.';
+    errorEl.classList.add('visible');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Request a briefing \u2192';
+  }
+});
+</script>
+
+<!-- SOURCES -->
+<section style="background:var(--lv-light);padding:3rem 2.5rem;border-top:1px solid #E8ECF2;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--lv-muted);margin-bottom:0.75rem;">Sources</p>
+    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.35rem;">
+      <li style="font-size:0.78rem;color:var(--lv-muted);font-weight:300;">JLL, <a href="https://www.jll.com/en-belux/insights/market-dynamics/emea-industrial" target="_blank" rel="noopener" style="color:var(--lv-teal);">European Industrial Market Dynamics Q4 2025</a></li>
+      <li style="font-size:0.78rem;color:var(--lv-muted);font-weight:300;">Prologis Research, <a href="https://www.prologisce.eu/about/news-press-releases/prologis-research-europes-eu500bn-logistics-market-faces-eu150bn-supply" target="_blank" rel="noopener" style="color:var(--lv-teal);">Europe's €500bn Logistics Market Faces €150bn Supply Gap as Barriers Mount (2025)</a></li>
+      <li style="font-size:0.78rem;color:var(--lv-muted);font-weight:300;">CBRE, <a href="https://www.cbre.com/insights/reports/european-logistics-occupier-survey-2025" target="_blank" rel="noopener" style="color:var(--lv-teal);">European Logistics Occupier Survey 2025</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <a class="footer-logo" href="https://logivalue.com">
+        <img src="https://logivalue.com/logo.svg" alt="Logivalue - logistics real estate investment intelligence">
+      </a>
+      <span class="footer-company">Logivalue GmbH &middot; Rosenthaler Str. 72a &middot; 10119 Berlin &middot; Germany</span>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:info@logivalue.com">info@logivalue.com</a>
+      <div class="footer-sep"></div>
+      <a href="https://logivalue.com">logivalue.com</a>
+      <div class="footer-sep"></div>
+      <a href="https://logivalue.com/data-security">Data Security</a>
+      <div class="footer-sep"></div>
+      <a href="https://logivalue.com/imprint">Imprint</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Logivalue GmbH. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
