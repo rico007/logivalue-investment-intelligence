@@ -630,6 +630,7 @@ document.getElementById('briefing-form').addEventListener('submit', async functi
         email: email,
         token: (document.querySelector('input[name="cf-turnstile-response"]') || {}).value || '',
         hp: document.getElementById('hp').value,
+        marketing: consentComms,
         renderedAt: formRenderedAt
       })
     });
@@ -637,6 +638,9 @@ document.getElementById('briefing-form').addEventListener('submit', async functi
     if (!res.ok) throw new Error(data.error || 'Something went wrong.');
 
     document.getElementById('briefing-form').style.display = 'none';
+    if (data.optInSent) {
+      document.getElementById('form-success').textContent = 'Thank you! We\u2019ll be in touch shortly. Please check your inbox to confirm the insights subscription.';
+    }
     document.getElementById('form-success').classList.add('visible');
   } catch (err) {
     errorEl.textContent = err.message || 'Something went wrong. Please try again.';
