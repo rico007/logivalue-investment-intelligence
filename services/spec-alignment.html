@@ -96,92 +96,19 @@
   ]
 }
 </script>
-<style>
-  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 300; font-display: swap; src: url(../fonts/poppins-300.woff2) format('woff2'); }
-  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/poppins-400.woff2) format('woff2'); }
-  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/poppins-500.woff2) format('woff2'); }
-  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/poppins-600.woff2) format('woff2'); }
-  @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url(../fonts/poppins-700.woff2) format('woff2'); }
-
-  :root { --lv-navy: #1A3B5D; --lv-navy-deep: #0f2640; --lv-blue: #5A74B8; --lv-coral: #FF8A6D; --lv-teal: #3DA5A1; --lv-cyan: #68DCD8; --lv-light: #F4F6FA; --lv-white: #ffffff; --lv-text: #1E293B; --lv-muted: #64748B; --font: 'Poppins', system-ui, sans-serif; }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font); color: var(--lv-text); background: var(--lv-white); line-height: 1.8; -webkit-font-smoothing: antialiased; }
-
-  nav { background: var(--lv-navy-deep); padding: 0.9rem 2.5rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); }
-  nav img { height: 30px; }
-  nav a { text-decoration: none; }
-  .nav-cta { background: var(--lv-coral); color: var(--lv-white); padding: 0.5rem 1.4rem; border-radius: 10px; font-weight: 600; font-size: 0.82rem; text-decoration: none; }
-
-  .hero-article { background: var(--lv-navy-deep); padding: 5rem 2.5rem 4rem; text-align: center; }
-  .hero-article .label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lv-coral); margin-bottom: 1rem; }
-  .hero-article h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--lv-white); font-weight: 600; line-height: 1.2; max-width: 800px; margin: 0 auto 1.25rem; letter-spacing: -0.02em; }
-  .hero-article .byline { font-size: 0.85rem; color: rgba(255,255,255,0.45); font-weight: 300; }
-  .hero-article .byline strong { color: rgba(255,255,255,0.7); font-weight: 500; }
-
-  article { max-width: 740px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
-  article h2 { font-size: 1.5rem; font-weight: 600; color: var(--lv-navy); margin: 3rem 0 1rem; letter-spacing: -0.01em; line-height: 1.3; }
-  article h3 { font-size: 1.15rem; font-weight: 600; color: var(--lv-navy); margin: 2.25rem 0 0.75rem; }
-  article p { font-size: 0.95rem; color: var(--lv-text); line-height: 1.85; margin-bottom: 1.25rem; font-weight: 300; }
-  article strong { font-weight: 600; color: var(--lv-navy); }
-  article a { color: var(--lv-teal); text-underline-offset: 3px; }
-  article ul, article ol { margin: 0 0 1.5rem 1.25rem; font-size: 0.95rem; font-weight: 300; color: var(--lv-text); }
-  article li { margin-bottom: 0.5rem; line-height: 1.75; }
-
-  blockquote { border-left: 3px solid var(--lv-coral); padding: 1.25rem 1.5rem; margin: 1.75rem 0; background: var(--lv-light); border-radius: 0 12px 12px 0; }
-  blockquote p { font-size: 0.95rem; font-style: italic; color: var(--lv-navy); margin-bottom: 0.5rem; font-weight: 400; line-height: 1.7; }
-  blockquote cite { font-size: 0.78rem; font-style: normal; color: var(--lv-muted); font-weight: 500; }
-
-  .comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.85rem; }
-  .comparison-table th { background: var(--lv-navy); color: var(--lv-white); padding: 0.75rem 1rem; text-align: left; font-weight: 600; font-size: 0.8rem; }
-  .comparison-table td { padding: 0.65rem 1rem; border-bottom: 1px solid #E8ECF2; font-weight: 300; color: var(--lv-text); vertical-align: top; }
-  .comparison-table tr:last-child td { border-bottom: none; }
-  .comparison-table tbody tr:hover { background: var(--lv-light); }
-
-  .stat-highlight { background: var(--lv-light); border-radius: 14px; padding: 1.75rem; margin: 1.5rem 0; }
-  .stat-highlight ul { margin-bottom: 0; }
-  .stat-highlight li { font-weight: 400; }
-
-  .key-takeaways { background: var(--lv-navy-deep); border-radius: 14px; padding: 1.75rem 2rem; margin: 0 0 2.5rem; }
-  .key-takeaways h3 { color: var(--lv-cyan); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 0.75rem; }
-  .key-takeaways ul { margin: 0; list-style: none; padding: 0; }
-  .key-takeaways li { font-size: 0.88rem; color: rgba(255,255,255,0.75); font-weight: 300; line-height: 1.7; padding-left: 1.25rem; position: relative; margin-bottom: 0.4rem; }
-  .key-takeaways li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 6px; height: 6px; border-radius: 50%; background: var(--lv-coral); }
-  .key-takeaways strong { color: rgba(255,255,255,0.95); font-weight: 500; }
-
-  .source-note { font-size: 0.78rem; color: var(--lv-muted); font-style: italic; margin-top: -0.5rem; margin-bottom: 1.5rem; }
-
-  .cta-box { background: var(--lv-navy-deep); border-radius: 16px; padding: 2.5rem; text-align: center; margin: 3rem 0; }
-  .cta-box h3 { color: var(--lv-white); font-size: 1.3rem; margin-bottom: 0.75rem; }
-  .cta-box p { color: rgba(255,255,255,0.55); font-size: 0.9rem; margin-bottom: 1.5rem; }
-  .cta-box a { background: var(--lv-coral); color: var(--lv-white); padding: 0.85rem 2rem; border-radius: 12px; font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; }
-
-  .updated { font-size: 0.78rem; color: var(--lv-muted); text-align: center; margin-bottom: 3rem; }
-
-  footer { background: var(--lv-navy-deep); padding: 2rem 2.5rem; text-align: center; }
-  footer p { font-size: 0.72rem; color: rgba(255,255,255,0.2); }
-  footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
-
-  @media (max-width: 600px) {
-    article { padding: 2rem 1.25rem 3rem; }
-    .hero-article { padding: 4rem 1.25rem 3rem; }
-    .comparison-table { font-size: 0.78rem; }
-    .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
-  }
-</style>
+<link rel="stylesheet" href="../css/site.css">
 </head>
 <body>
 
-<nav>
-  <a href="https://investment-intelligence.logivalue.com"><img src="https://logivalue.com/logo.svg" alt="Logivalue - logistics real estate investment intelligence"></a>
-  <a class="nav-cta" href="https://investment-intelligence.logivalue.com/#talk">Request a briefing</a>
+<nav class="top">
+  <a class="mark" href="https://investment-intelligence.logivalue.com/" aria-label="Logivalue Investment Intelligence home">logivalue<i>.</i></a>
+  <a class="btn sm" href="https://investment-intelligence.logivalue.com/#talk">Get in touch</a>
 </nav>
 
 <div class="hero-article">
   <div class="label">Building Specifications</div>
   <h1>Building Spec Alignment for Logistics Properties</h1>
-  <div class="byline">By <strong><a href="https://www.linkedin.com/in/raimundpaetzmann/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none;">Raimund Paetzmann</a></strong>, <strong><a href="https://www.linkedin.com/in/knyphausen/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none;">Carl-Friedrich zu Knyphausen</a></strong>, and <strong><a href="https://www.linkedin.com/in/lisa-graham-81218831/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none;">Lisa Graham</a></strong> · Logivalue GmbH · Last updated April 2026</div>
+  <div class="byline">By <strong><a href="https://www.linkedin.com/in/raimundpaetzmann/" target="_blank" rel="noopener">Raimund Paetzmann</a></strong>, <strong><a href="https://www.linkedin.com/in/knyphausen/" target="_blank" rel="noopener">Carl-Friedrich zu Knyphausen</a></strong>, and <strong><a href="https://www.linkedin.com/in/lisa-graham-81218831/" target="_blank" rel="noopener">Lisa Graham</a></strong> · Logivalue GmbH · Last updated April 2026</div>
 </div>
 
 <article>
@@ -320,8 +247,21 @@
 
 </article>
 
-<footer>
-  <p>&copy; 2026 Logivalue GmbH &middot; <a href="https://investment-intelligence.logivalue.com">Investment Intelligence</a> &middot; <a href="https://logivalue.com/data-security">Data Security</a> &middot; <a href="https://logivalue.com/imprint">Imprint</a></p>
+<footer class="site">
+  <div class="foot">
+    <div>
+      <a class="mark" href="https://investment-intelligence.logivalue.com/" style="font-size:24px">logivalue<i>.</i></a>
+      <div class="claim">Voice of the occupier</div>
+    </div>
+    <div>
+      Logivalue GmbH &middot; Rosenthaler Str. 72A &middot; 10119 Berlin &middot; Germany<br>
+      <a href="mailto:info@logivalue.com">info@logivalue.com</a> &middot;
+      <a href="https://investment-intelligence.logivalue.com/">Investment Intelligence</a> &middot;
+      <a href="https://logivalue.com/imprint">Imprint</a> &middot;
+      <a href="https://logivalue.com/data-security">Privacy</a>
+    </div>
+  </div>
+  <div class="legal">&copy; 2026 Logivalue GmbH. All rights reserved.</div>
 </footer>
 
 </body>

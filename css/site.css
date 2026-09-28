@@ -1,0 +1,253 @@
+/*
+ * Shared stylesheet for all subpages of investment-intelligence.logivalue.com
+ * (blog, guides, services, methodology, team).
+ *
+ * Follows the landing page (index.html) design: Poppins, periwinkle/navy
+ * bands, coral pill buttons, a text wordmark and tight bold headlines.
+ * Long-form content sits on a light "paper" band for readability.
+ * The landing page keeps its own inline CSS; tokens here mirror it, so change
+ * both when a brand colour changes.
+ */
+
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/poppins-400.woff2) format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/poppins-500.woff2) format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/poppins-600.woff2) format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(../fonts/poppins-700.woff2) format('woff2')}
+
+:root{
+  /* landing page tokens */
+  --peri:#5F73B3;
+  --mid:#304E76;
+  --navy:#223A5A;
+  --deep:#1A2E49;
+  --coral:#EF9074;
+  --coral-lt:#F5AD97;
+  --btn-ink:#2B2118;
+  --white:#fff;
+  --faint:#D5DCEC;
+  --muted:#A9B6D0;
+  --line:rgba(255,255,255,.20);
+  --sans:'Poppins','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;
+  /* reading area (light) */
+  --paper:#F6F5F1;
+  --panel:#E9EDF5;
+  --ink:#1A2E49;
+  --text:#33415C;
+  --soft:#5B6882;
+  --rule:#DDE2EC;
+  --coral-ink:#B04A2B; /* coral dark enough for text on paper (WCAG AA) */
+  /* layout: side gutter that lines up with the landing page's 1080px wrap */
+  --gut:max(24px, calc((100% - 1032px) / 2));
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);
+  font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:4px}
+
+/* ---------- top bar (same as landing masthead) ---------- */
+nav.top{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  background:var(--peri);padding:22px var(--gut) 0}
+.mark{font-weight:700;font-size:26px;letter-spacing:-.02em;text-decoration:none;color:var(--white)}
+.mark i{font-style:normal;color:var(--coral)}
+
+/* ---------- buttons ---------- */
+.btn,.cta-box a{font:inherit;font-weight:600;font-size:16px;cursor:pointer;text-decoration:none;
+  display:inline-block;padding:14px 26px;border-radius:999px;border:1px solid transparent;
+  background:var(--coral);color:var(--btn-ink);transition:background .12s ease,transform .12s ease}
+.btn:hover,.cta-box a:hover{background:var(--coral-lt)}
+.btn:active,.cta-box a:active{transform:translateY(1px)}
+.btn.sm{font-size:14px;padding:10px 20px}
+
+/* ---------- page header band (continues the top bar) ---------- */
+.hero,.hero-article,.hero-profile{position:relative;overflow:hidden;background:var(--peri);
+  color:var(--white);padding:56px var(--gut) 76px}
+.hero::before,.hero-article::before,.hero-profile::before{content:"";position:absolute;
+  width:640px;height:640px;right:-220px;bottom:-380px;border-radius:50%;
+  background:rgba(255,255,255,.07);pointer-events:none}
+.hero > *,.hero-article > *,.hero-profile > *{position:relative}
+.label{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);margin:0 0 16px}
+.label a{color:inherit;text-decoration:none}
+.label a:hover{color:var(--white);text-decoration:underline}
+.hero h1,.hero-article h1,.hero-profile h1{font-weight:700;letter-spacing:-.03em;line-height:1.06;
+  margin:0 0 20px;font-size:clamp(32px,5.2vw,54px);max-width:22ch;color:var(--white)}
+.hero p{font-size:clamp(17px,2.1vw,20px);color:var(--faint);max-width:56ch;margin:0}
+.byline{font-size:15px;color:var(--faint);max-width:70ch}
+.byline strong{color:var(--white);font-weight:600}
+.byline a{color:var(--white);text-decoration:none;border-bottom:1px solid var(--line)}
+.byline a:hover{border-bottom-color:var(--white)}
+
+/* profile header */
+.hero-profile .photo{width:168px;height:168px;border-radius:50%;object-fit:cover;margin:0 0 22px}
+.hero-profile .role{font-size:clamp(16px,1.9vw,19px);color:var(--faint);margin:-6px 0 22px;max-width:60ch}
+.hero-profile .linkedin-link{display:inline-block;padding:10px 20px;border-radius:999px;
+  border:1px solid var(--line);color:var(--white);text-decoration:none;font-weight:600;font-size:14px}
+.hero-profile .linkedin-link:hover{background:rgba(255,255,255,.10);border-color:var(--white)}
+.hero-profile .external-badge{display:inline-block;margin-left:8px;padding:3px 10px;border-radius:999px;
+  background:rgba(255,255,255,.14);color:var(--white);font-size:12px;font-weight:600;vertical-align:middle}
+
+/* full-width image under a blog header */
+.hero-image{display:block;width:100%;max-height:480px;overflow:hidden;background:var(--deep)}
+.hero-image img{width:100%;height:480px;object-fit:cover;object-position:center}
+
+/* ---------- reading area ---------- */
+article,.content{max-width:760px;margin:0 auto;padding:64px 24px 88px}
+article p,.content p{font-size:17px;line-height:1.75;margin:0 0 20px}
+article h2,.content h2{font-weight:700;letter-spacing:-.025em;line-height:1.15;color:var(--ink);
+  font-size:clamp(24px,3.2vw,32px);margin:56px 0 16px}
+article h2:first-child,.content h2:first-child{margin-top:0}
+article h3,.content h3{font-weight:700;font-size:19px;letter-spacing:-.015em;color:var(--ink);margin:36px 0 10px}
+article h4,.content h4{font-weight:600;font-size:16px;color:var(--ink);margin:0 0 6px}
+article strong,.content strong{color:var(--ink);font-weight:600}
+article a,.content a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--coral);
+  text-decoration-thickness:2px;text-underline-offset:3px}
+article a:hover,.content a:hover{color:var(--coral-ink)}
+article ul,article ol,.content ul,.content ol{margin:0 0 24px;padding-left:22px;font-size:17px}
+article li,.content li{margin-bottom:8px;line-height:1.7}
+article li::marker,.content li::marker{color:var(--coral-ink)}
+.updated{font-size:14px;color:var(--soft);margin:0 0 36px}
+.source-note{font-size:14px;color:var(--soft);font-style:italic;margin:-8px 0 24px}
+
+blockquote{margin:32px 0;padding:4px 0 4px 22px;border-left:4px solid var(--coral)}
+blockquote p{font-size:19px;font-weight:500;line-height:1.55;color:var(--ink);margin:0 0 10px}
+blockquote cite{font-size:14px;font-style:normal;color:var(--soft);font-weight:500}
+
+/* dark panels inside the reading area (echo the landing bands) */
+.key-takeaways,.stat-box,.team-links{background:var(--navy);color:var(--faint);
+  border-radius:20px;padding:28px 30px;margin:0 0 44px}
+.key-takeaways h3,.team-links h3{color:var(--coral-lt);font-size:12.5px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;margin:0 0 14px}
+.key-takeaways ul{list-style:none;margin:0;padding:0}
+.key-takeaways li{position:relative;padding-left:20px;margin-bottom:10px;font-size:16px;line-height:1.6;color:var(--faint)}
+.key-takeaways li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--coral)}
+.key-takeaways strong,.stat-box strong{color:var(--white)}
+.key-takeaways a{color:var(--white)}
+.stat-box{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:36px 0}
+.stat-num{font-weight:700;font-size:clamp(30px,4.4vw,44px);letter-spacing:-.03em;line-height:1;color:var(--coral)}
+.stat-desc{color:var(--faint);font-size:14.5px;margin-top:8px;line-height:1.45}
+
+/* light panels */
+.stat-highlight,.step,.signal-card,.info-card,.focus-card,.team-footnote{background:var(--panel);border-radius:16px;padding:22px 24px}
+.stat-highlight{margin:28px 0}
+.stat-highlight ul{margin-bottom:0}
+.variable-card{border:1px solid var(--rule);background:var(--white);border-radius:16px;padding:26px 28px;margin:20px 0}
+.variable-card p,.signal-card p,.step p,.info-card p,.focus-card p,.career-item p{font-size:15.5px;line-height:1.6;margin:0;color:var(--text)}
+.vc-label,.step-num,.signal-label,.post-meta,.team-former,.info-card h4{font-size:12px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--coral-ink);margin:0 0 8px}
+.vc-title{font-weight:700;font-size:19px;letter-spacing:-.015em;color:var(--ink);margin:0 0 8px}
+.signal-grid,.steps,.info-grid,.focus-areas{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0 36px}
+.steps{grid-template-columns:repeat(3,1fr)}
+.signal-label.high{color:var(--mid)}
+.signal-label.low{color:var(--coral-ink)}
+.signal-card h4,.step h3,.focus-card h4{font-weight:700;font-size:16.5px;color:var(--ink);margin:0 0 6px;line-height:1.35}
+.info-card h4{color:var(--soft)}
+
+.category-list{columns:2;column-gap:28px;list-style:none;padding:0!important;margin:16px 0 28px}
+.category-list li{break-inside:avoid;padding:4px 0 4px 14px;border-left:3px solid var(--coral);margin-bottom:10px;font-size:16px}
+.category-list li::marker{content:none}
+
+/* FAQ */
+.faq-item{margin:0 0 40px}
+.faq-item h2{font-size:clamp(20px,2.4vw,24px);margin:0 0 10px}
+
+/* tables */
+.comparison-table{width:100%;border-collapse:collapse;margin:24px 0 36px;font-size:15px;background:var(--white);
+  border-radius:14px;overflow:hidden}
+.comparison-table th{background:var(--navy);color:var(--white);text-align:left;font-weight:600;font-size:14px;padding:12px 14px}
+.comparison-table td{padding:11px 14px;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--text)}
+.comparison-table tr:last-child td{border-bottom:none}
+.comparison-table tbody tr:hover{background:var(--panel)}
+
+/* profile: career timeline */
+.career-item{border-left:4px solid var(--coral);background:var(--white);border-radius:0 14px 14px 0;padding:16px 22px;margin:14px 0}
+.career-item h4{margin-bottom:2px}
+.period{font-size:13.5px;color:var(--soft);font-weight:500;margin-bottom:8px}
+.back-link{display:inline-block;margin:28px 0;font-size:15px;font-weight:600;color:var(--ink);
+  text-decoration:underline;text-decoration-color:var(--coral);text-decoration-thickness:2px;text-underline-offset:3px}
+.back-link:hover{color:var(--coral-ink)}
+.content > .back-link:first-child{margin-top:0}
+
+/* links to the other team members */
+.team-links{margin:44px 0}
+.team-links-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.team-link-card{display:block;padding:16px 20px;border-radius:14px;background:rgba(255,255,255,.07);
+  text-decoration:none!important;transition:background .15s ease}
+.team-link-card:hover{background:rgba(255,255,255,.13)}
+.team-link-card .name{color:var(--white);font-weight:600;font-size:16px}
+.team-link-card .title{color:var(--faint);font-size:14px;margin-top:2px}
+
+/* call to action: a periwinkle panel like the landing "let's talk." band */
+.cta-box{position:relative;overflow:hidden;background:var(--peri);color:var(--white);
+  border-radius:24px;padding:40px 36px;margin:56px 0}
+.cta-box::before{content:"";position:absolute;width:420px;height:420px;right:-160px;top:-200px;
+  border-radius:50%;background:rgba(255,255,255,.08);pointer-events:none}
+.cta-box > *{position:relative}
+.cta-box h3{color:var(--white);font-size:clamp(22px,2.8vw,28px);font-weight:700;letter-spacing:-.025em;
+  line-height:1.15;margin:0 0 12px;max-width:26ch}
+.cta-box p{color:var(--faint);font-size:16.5px;margin:0 0 24px;max-width:56ch}
+.cta-box a{text-decoration:none!important;color:var(--btn-ink)!important}
+
+/* related posts and sources */
+.related,.sources{border-top:1px solid var(--rule);margin-top:48px;padding-top:28px}
+.related h3,.sources h3{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin:0 0 14px}
+.related-links{display:flex;flex-direction:column;gap:10px}
+.related-links a{font-size:16.5px;font-weight:500;text-decoration:none}
+.related-links a:hover{text-decoration:underline}
+.sources ul{list-style:none;padding:0;margin:0}
+.sources li{font-size:14px;color:var(--soft);margin-bottom:6px;line-height:1.55}
+
+/* ---------- blog index ---------- */
+.posts{padding:40px var(--gut) 88px}
+.posts > *{max-width:960px}
+.post-card{display:grid;grid-template-columns:1fr auto auto;gap:24px;align-items:center;
+  padding:30px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit}
+.post-title{font-weight:700;font-size:clamp(19px,2.3vw,22px);letter-spacing:-.02em;line-height:1.25;
+  color:var(--ink);margin:0 0 8px;transition:color .15s ease}
+.post-excerpt{font-size:15.5px;color:var(--text);line-height:1.65;max-width:62ch}
+.post-authors{font-size:14px;color:var(--soft);margin-top:10px}
+.post-arrow{font-size:22px;color:var(--coral-ink);transition:transform .15s ease}
+.post-card:hover .post-title{color:var(--coral-ink)}
+.post-card:hover .post-arrow{transform:translateX(4px)}
+.post-thumb{width:168px;height:104px;object-fit:cover;border-radius:12px}
+
+/* ---------- team index ---------- */
+section.team{padding:56px var(--gut) 88px}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.team-card{display:block;text-decoration:none;color:inherit;background:var(--white);border:1px solid var(--rule);
+  border-radius:20px;padding:32px 26px 28px;transition:transform .15s ease,box-shadow .15s ease}
+.team-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(26,46,73,.10)}
+.team-avatar{width:132px;height:132px;border-radius:50%;overflow:hidden;margin:0 0 18px}
+.team-avatar img{width:100%;height:100%;object-fit:cover}
+.team-card h2{font-weight:700;font-size:19px;letter-spacing:-.015em;color:var(--ink);margin:0 0 4px}
+.team-card p{font-size:15px;color:var(--text);line-height:1.6;margin:8px 0 0}
+.profile-link{display:inline-block;margin-top:14px;font-weight:600;font-size:14.5px;color:var(--coral-ink)}
+.team-footnote{margin-top:32px}
+.team-footnote p{margin:0;font-size:15.5px;line-height:1.65;color:var(--text);max-width:75ch}
+.team-footnote strong{color:var(--ink)}
+
+/* ---------- footer (same as landing) ---------- */
+footer.site{background:var(--deep);color:var(--faint);padding:56px var(--gut) 40px;font-size:15px;line-height:1.6}
+.foot{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-end}
+.foot a{color:var(--faint);text-decoration:none}
+.foot a:hover{color:var(--white);text-decoration:underline}
+.claim{color:var(--faint);font-size:14px;margin-top:6px}
+.legal{margin-top:24px;color:var(--muted);font-size:13px}
+
+/* ---------- small screens ---------- */
+@media (max-width:760px){
+  .signal-grid,.steps,.info-grid,.focus-areas,.team-links-grid,.stat-box{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .category-list{columns:1}
+  .post-card{grid-template-columns:1fr;gap:14px}
+  .post-arrow{display:none}
+  .post-thumb{width:100%;height:auto;aspect-ratio:16/9;grid-row:1}
+  .hero-image img{height:260px}
+  .cta-box{padding:32px 24px}
+  .comparison-table{display:block;overflow-x:auto;white-space:normal;font-size:14px}
+  .comparison-table th,.comparison-table td{min-width:150px}
+  article,.content{padding:44px 20px 64px}
+}
